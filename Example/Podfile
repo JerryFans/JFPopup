@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JFPopup_Example' do
+  pod 'JFPopup', :path => '../'
+
+  target 'JFPopup_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

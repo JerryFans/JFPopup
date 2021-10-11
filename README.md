@@ -22,7 +22,7 @@ JFPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFPopup'
+pod 'JFPopup', '1.0.0'
 ```
 
 ## Author

@@ -5,6 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/JFPopup.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
 [![Platform](https://img.shields.io/cocoapods/p/JFPopup.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
 
+JFPopup is a Swift Module help you popup your custom view easily.
+
+Support 3 way to popup, Drawer, Dialog and BottomSheet.
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -27,3 +32,4 @@ JerryFans, fanjiarong_haohao@163.com
 ## License
 
 JFPopup is available under the MIT license. See the LICENSE file for more info.
+

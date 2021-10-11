@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFPopup'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of JFPopup.'
+  s.version          = '1.0.0'
+  s.summary          = 'A Swift Popup Module help you popup your custom view easily'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,28 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                       *JFPopup can help you popup your custom view with any way*
+                       *Like popup a Drawer, a dialog, a bottomSheet,*
+                       *Also support Objc, but you should writeJFPopup  extension with youself, usage see example.
+                       *Support many General Kit:
+                       *Version 1.0.0 support a Wechat Style ActionSheet
+                       *In the feature, will support more popup view like UIAlertView
                        DESC
 
-  s.homepage         = 'https://github.com/fanjiaorng919/JFPopup'
+  s.homepage         = 'https://github.com/JerryFans/JFPopup'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'fanjiaorng919' => 'fanjiarong_haohao@163.com' }
-  s.source           = { :git => 'https://github.com/fanjiaorng919/JFPopup.git', :tag => s.version.to_s }
+  s.author           = { 'JerryFans' => 'fanjiarong_haohao@163.com' }
+  s.source           = { :git => 'https://github.com/JerryFans/JFPopup.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'JFPopup/Classes/**/*'
+  
+  s.swift_version = ['4.0']
+  
+  s.dependency 'JRBaseKit', '~> 0.9.0'
   
   # s.resource_bundles = {
   #   'JFPopup' => ['JFPopup/Assets/*.png']
@@ -38,5 +47,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end

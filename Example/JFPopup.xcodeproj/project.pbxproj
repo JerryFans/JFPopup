@@ -14,6 +14,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B4B0634027133696003E38E5 /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0633F27133696003E38E5 /* DrawerView.swift */; };
+		B4B0634627133B77003E38E5 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B0634527133B77003E38E5 /* OCViewController.m */; };
+		B4B0634827133E1B003E38E5 /* UIViewController+JFPopupObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0634727133E1B003E38E5 /* UIViewController+JFPopupObjc.swift */; };
+		B4B0634B27143506003E38E5 /* TestCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0634A27143506003E38E5 /* TestCustomViewController.swift */; };
 		C4F3C7D884DD819D91109431 /* Pods_JFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7916B7078741467949EF756C /* Pods_JFPopup_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,11 +46,17 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7916B7078741467949EF756C /* Pods_JFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7047FF0827570900271E62 /* Pods-JFPopup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFPopup_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JFPopup_Tests/Pods-JFPopup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4B0633F27133696003E38E5 /* DrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		B4B0634327133B77003E38E5 /* JFPopup_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JFPopup_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4B0634427133B77003E38E5 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		B4B0634527133B77003E38E5 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		B4B0634727133E1B003E38E5 /* UIViewController+JFPopupObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+JFPopupObjc.swift"; sourceTree = "<group>"; };
+		B4B0634A27143506003E38E5 /* TestCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomViewController.swift; sourceTree = "<group>"; };
 		B66A1928F4B978F9DE68D7D0 /* Pods-JFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFPopup_Example.debug.xcconfig"; path = "Target Support Files/Pods-JFPopup_Example/Pods-JFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C907835D994DB8ECBDD7D815 /* JFPopup.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JFPopup.podspec; path = ../JFPopup.podspec; sourceTree = "<group>"; };
-		CB6872B0F8CDC9C998B4D057 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C907835D994DB8ECBDD7D815 /* JFPopup.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JFPopup.podspec; path = ../JFPopup.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CB6872B0F8CDC9C998B4D057 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CCF091537B76D8D23FAEFC68 /* Pods-JFPopup_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFPopup_Tests.release.xcconfig"; path = "Target Support Files/Pods-JFPopup_Tests/Pods-JFPopup_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EBA2391484573F36A50EEC99 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EBA2391484573F36A50EEC99 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +105,16 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B4B0634727133E1B003E38E5 /* UIViewController+JFPopupObjc.swift */,
+				B4B0634A27143506003E38E5 /* TestCustomViewController.swift */,
+				B4B0633F27133696003E38E5 /* DrawerView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				B4B0634427133B77003E38E5 /* OCViewController.h */,
+				B4B0634527133B77003E38E5 /* OCViewController.m */,
+				B4B0634327133B77003E38E5 /* JFPopup_Example-Bridging-Header.h */,
 			);
 			name = "Example for JFPopup";
 			path = JFPopup;
@@ -156,7 +172,6 @@
 				9E7047FF0827570900271E62 /* Pods-JFPopup_Tests.debug.xcconfig */,
 				CCF091537B76D8D23FAEFC68 /* Pods-JFPopup_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +228,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = 4L75765R87;
+						LastSwiftMigration = 1250;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4L75765R87;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +245,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,10 +311,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JFPopup_Example/Pods-JFPopup_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JFPopup/JFPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/JRBaseKit/JRBaseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JFPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRBaseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,8 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B0634027133696003E38E5 /* DrawerView.swift in Sources */,
+				B4B0634627133B77003E38E5 /* OCViewController.m in Sources */,
+				B4B0634827133E1B003E38E5 /* UIViewController+JFPopupObjc.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B4B0634B27143506003E38E5 /* TestCustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,11 +503,19 @@
 			baseConfigurationReference = B66A1928F4B978F9DE68D7D0 /* Pods-JFPopup_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4L75765R87;
 				INFOPLIST_FILE = JFPopup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jerryfans.demo.JFPopup-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JFPopup/JFPopup_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,11 +526,18 @@
 			baseConfigurationReference = 480081D53829EEF252594E4D /* Pods-JFPopup_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4L75765R87;
 				INFOPLIST_FILE = JFPopup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jerryfans.demo.JFPopup-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JFPopup/JFPopup_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -507,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E7047FF0827570900271E62 /* Pods-JFPopup_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4L75765R87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCF091537B76D8D23FAEFC68 /* Pods-JFPopup_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4L75765R87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

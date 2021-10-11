@@ -1,0 +1,6 @@
+framework module JFPopup {
+  umbrella header "JFPopup-umbrella.h"
+
+  export *
+  module * { export * }
+}

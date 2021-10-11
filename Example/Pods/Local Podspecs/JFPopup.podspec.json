@@ -1,0 +1,31 @@
+{
+  "name": "JFPopup",
+  "version": "0.1.0",
+  "summary": "A short description of JFPopup.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/fanjiaorng919/JFPopup",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "fanjiaorng919": "fanjiarong_haohao@163.com"
+  },
+  "source": {
+    "git": "https://github.com/fanjiaorng919/JFPopup.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "JFPopup/Classes/**/*",
+  "swift_versions": [
+    "4.0"
+  ],
+  "dependencies": {
+    "JRBaseKit": [
+      "~> 0.9.0"
+    ]
+  },
+  "swift_version": "4.0"
+}

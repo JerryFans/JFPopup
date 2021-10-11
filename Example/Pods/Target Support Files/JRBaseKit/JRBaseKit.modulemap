@@ -1,0 +1,6 @@
+framework module JRBaseKit {
+  umbrella header "JRBaseKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

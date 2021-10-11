@@ -22,7 +22,7 @@ pod 'JFPopup'
 
 ## Author
 
-fanjiaorng919, fanjiarong_haohao@163.com
+JerryFans, fanjiarong_haohao@163.com
 
 ## License
 

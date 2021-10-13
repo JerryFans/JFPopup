@@ -1,9 +1,10 @@
 # JFPopup
 
-[![CI Status](https://img.shields.io/travis/fanjiaorng919/JFPopup.svg?style=flat)](https://travis-ci.org/fanjiaorng919/JFPopup)
 [![Version](https://img.shields.io/cocoapods/v/JFPopup.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
 [![License](https://img.shields.io/cocoapods/l/JFPopup.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
 [![Platform](https://img.shields.io/cocoapods/p/JFPopup.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
+[![Language](https://img.shields.io/badge/language-Swift-DE5C43.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
+[![Support](http://img.shields.io/badge/support-ObjC-brightgreen.svg?style=flat)](https://cocoapods.org/pods/JFPopup)
 
 JFPopup is a Swift Module help you popup your custom view easily.
 

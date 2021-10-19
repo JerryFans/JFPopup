@@ -10,10 +10,19 @@
 #import "JFPopup_Example-Swift.h"
 
 @interface OCViewController ()
-
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation OCViewController
+
+- (UIButton *)button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_button setTitle:@"不停点我" forState:UIControlStateNormal];
+        [_button setBackgroundColor:UIColor.redColor];
+    }
+    return _button;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +33,23 @@
             
         }]];
     }];
+    [JFToastView toastWithHit:@"你好我兼容Object-C"];
+    [self.view addSubview:self.button];
+    self.button.frame = CGRectMake(50, 150, 150, 150);
+    [self.button addTarget:self action:@selector(clickMe) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
+}
+
+- (void)clickMe {
+    //暂时只兼容 这三种， 后续有issue 可以继续支持
+    int random = arc4random() % 3;
+    if (random == 0) {
+        [JFToastView toastWithHit:@"你好我兼容Object-C"];
+    } else if (random == 1) {
+        [JFToastView toastWithIcon:JFToastObjcAssetTypeImageName imageName:@"face"];
+    } else {
+        [JFToastView toastWithHit:@"支付成功" type:JFToastObjcAssetTypeSuccess imageName:nil];
+    }
 }
 
 /*

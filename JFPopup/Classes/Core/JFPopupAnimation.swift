@@ -10,7 +10,7 @@ import QuartzCore
 
 class JFPopupAnimation: NSObject {
     
-    static func present(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView) {
+    static func present(with transitonContext: UIViewControllerContextTransitioning?, config: JFPopupConfig, contianerView: UIView, completion: ((_ isFinished: Bool) -> ())?) {
         let type = config.animationType
         switch type {
         case .bottomSheet:
@@ -21,14 +21,25 @@ class JFPopupAnimation: NSObject {
                     contianerView.frame.origin.y = CGSize.jf.screenSize().height - contianerView.frame.size.height
                     contianerView.layoutIfNeeded()
                 }) { (finished) in
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(finished)
                 }
             }
             break
         case .dialog:
             do {
                 contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: CGSize.jf.screenSize().height / 2)
+                if config.toastPosition == .top {
+                    contianerView.jf_top = CGFloat.jf.navigationBarHeight() + 15
+                } else if config.toastPosition == .bottom {
+                    contianerView.jf_bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+                }
                 contianerView.layoutIfNeeded()
+                guard config.withoutAnimation == false else {
+                    transitonContext?.completeTransition(true)
+                    completion?(true)
+                    return
+                }
                 let animation = CAKeyframeAnimation(keyPath: "transform")
                 animation.duration = 0.25
                 animation.isRemovedOnCompletion = true
@@ -40,7 +51,8 @@ class JFPopupAnimation: NSObject {
                 animation.values = values
                 contianerView.layer.add(animation, forKey: nil)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(true)
                 }
             }
             break
@@ -59,7 +71,8 @@ class JFPopupAnimation: NSObject {
                     contianerView.frame.origin.x = targetY
                     contianerView.layoutIfNeeded()
                 }) { (finished) in
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(finished)
                 }
             }
             break
@@ -67,13 +80,14 @@ class JFPopupAnimation: NSObject {
         }
     }
     
-    static func dismiss(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView?) {
+    static func dismiss(with transitonContext: UIViewControllerContextTransitioning?, config: JFPopupConfig, contianerView: UIView?, completion: ((_ isFinished: Bool) -> ())?) {
         let type = config.animationType
         switch type {
         case .bottomSheet:
             do {
                 guard let _ = contianerView else {
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(true)
                     return
                 }
                 UIView.animate(withDuration: 0.25, animations: {
@@ -81,7 +95,8 @@ class JFPopupAnimation: NSObject {
                     contianerView?.frame.origin.y = CGSize.jf.screenSize().height
                     contianerView?.layoutIfNeeded()
                 }) { (finished) in
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(finished)
                 }
             }
             break
@@ -91,14 +106,16 @@ class JFPopupAnimation: NSObject {
                     contianerView?.superview?.alpha = 0
                     contianerView?.alpha = 0
                 }) { (finished) in
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(finished)
                 }
             }
             break
         case .drawer:
             do {
                 guard let view = contianerView else {
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(true)
                     return
                 }
                 var targetY: CGFloat = -view.frame.size.width
@@ -110,7 +127,8 @@ class JFPopupAnimation: NSObject {
                     contianerView?.frame.origin.x = targetY
                     contianerView?.layoutIfNeeded()
                 }) { (finished) in
-                    transitonContext.completeTransition(true)
+                    transitonContext?.completeTransition(true)
+                    completion?(finished)
                 }
             }
             break

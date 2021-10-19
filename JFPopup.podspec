@@ -41,9 +41,9 @@ Pod::Spec.new do |s|
   
   s.dependency 'JRBaseKit', '~> 0.9.0'
   
-  # s.resource_bundles = {
-  #   'JFPopup' => ['JFPopup/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'JFPopup' => ['JFPopup/Assets/*.png'],
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

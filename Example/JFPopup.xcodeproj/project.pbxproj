@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B49C3301271E9B44001C29AC /* PresentVCModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C3300271E9B44001C29AC /* PresentVCModeViewController.swift */; };
+		B49C3304271E9F39001C29AC /* PopupInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C3303271E9F39001C29AC /* PopupInViewController.swift */; };
 		B4B0634027133696003E38E5 /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0633F27133696003E38E5 /* DrawerView.swift */; };
 		B4B0634627133B77003E38E5 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B0634527133B77003E38E5 /* OCViewController.m */; };
 		B4B0634827133E1B003E38E5 /* UIViewController+JFPopupObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0634727133E1B003E38E5 /* UIViewController+JFPopupObjc.swift */; };
@@ -46,6 +48,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7916B7078741467949EF756C /* Pods_JFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7047FF0827570900271E62 /* Pods-JFPopup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFPopup_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JFPopup_Tests/Pods-JFPopup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B49C3300271E9B44001C29AC /* PresentVCModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentVCModeViewController.swift; sourceTree = "<group>"; };
+		B49C3303271E9F39001C29AC /* PopupInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInViewController.swift; sourceTree = "<group>"; };
 		B4B0633F27133696003E38E5 /* DrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
 		B4B0634327133B77003E38E5 /* JFPopup_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JFPopup_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		B4B0634427133B77003E38E5 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
@@ -103,11 +107,12 @@
 		607FACD21AFB9204008FA782 /* Example for JFPopup */ = {
 			isa = PBXGroup;
 			children = (
+				B49C32FF271E9B1E001C29AC /* Controller */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B4B0633F27133696003E38E5 /* DrawerView.swift */,
 				B4B0634727133E1B003E38E5 /* UIViewController+JFPopupObjc.swift */,
 				B4B0634A27143506003E38E5 /* TestCustomViewController.swift */,
-				B4B0633F27133696003E38E5 /* DrawerView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -162,6 +167,15 @@
 				18562D9BD605081F6FF51FAF /* Pods_JFPopup_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B49C32FF271E9B1E001C29AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B49C3300271E9B44001C29AC /* PresentVCModeViewController.swift */,
+				B49C3303271E9F39001C29AC /* PopupInViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		BA0DCA8BFC65906092CCF12F /* Pods */ = {
@@ -352,8 +366,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49C3304271E9F39001C29AC /* PopupInViewController.swift in Sources */,
 				B4B0634027133696003E38E5 /* DrawerView.swift in Sources */,
 				B4B0634627133B77003E38E5 /* OCViewController.m in Sources */,
+				B49C3301271E9B44001C29AC /* PresentVCModeViewController.swift in Sources */,
 				B4B0634827133E1B003E38E5 /* UIViewController+JFPopupObjc.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

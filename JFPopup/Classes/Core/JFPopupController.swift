@@ -7,51 +7,37 @@
 
 import UIKit
 
-@objc public enum JFPopupAnimationDirection: Int {
-    case unowned
-    case left
-    case right
-}
-
-@objc public enum JFPopupAnimationType: Int {
-    case dialog
-    case bottomSheet
-    case drawer
-}
-
-@objc public protocol JFPopupDataSource: AnyObject {
-    @objc func viewForContainer() -> UIView?
-}
-
-public protocol JFPopupAnimationProtocol: AnyObject {
-    func present(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView)
-    func dismiss(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView?)
-}
-
-public struct JFPopupConfig {
+extension JFPopupController: JFPopupProtocol {
     
-    public var bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-    public var animationType: JFPopupAnimationType = .dialog
-    public var isDismissible = true
-    public var enableDrag = true
-    public var direction: JFPopupAnimationDirection = .unowned
+    public func autoDismissHandle() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + self.config.autoDismissDuration.timeDuration()) {
+            self.dismissPopupView()
+        }
+    }
     
-    public static var dialog = JFPopupConfig(enableDrag: false)
-    public static var bottomSheet = JFPopupConfig(animationType: .bottomSheet)
-    public static var drawer = JFPopupConfig(animationType: .drawer, direction: .left)
+    public func dismissPopupView() {
+        self.closeVC(with: nil)
+    }
+    
 }
 
 open class JFPopupController: UIViewController,JFPopupDataSource {
     
+    //JFPopupProtocol
+    public weak var dataSource: JFPopupDataSource?
+    public weak var popupProtocol: JFPopupAnimationProtocol?
+    public var container: UIView?
+    public var config: JFPopupConfig = .dialog
+    //JFPopupProtocol
+    
+    
+    //JFPopupDataSource
     @objc open func viewForContainer() -> UIView? {
         return nil
     }
+    //JFPopupDataSource
 
     weak var transitionContext: UIViewControllerAnimatedTransitioning?
-    public weak var dataSource: JFPopupDataSource?
-    public weak var popupProtocol: JFPopupAnimationProtocol?
-    var container: UIView?
-    var config: JFPopupConfig = .dialog
     var isShow = false
     var beginTouchPoint: CGPoint = .zero
     var beginFrame: CGRect = .zero
@@ -261,21 +247,24 @@ extension JFPopupController: UIViewControllerTransitioningDelegate,UIViewControl
             transitonContext.completeTransition(true)
             return
         }
-        self.popupProtocol?.present(with: transitonContext, config: self.config, contianerView: contianerView)
+        self.popupProtocol?.present(with: transitonContext, config: self.config, contianerView: contianerView, completion: { [weak self] isFinished in
+            self?.autoDismissHandle()
+        })
     }
     
     func dismiss(transitonContext: UIViewControllerContextTransitioning) {
-        self.popupProtocol?.dismiss(with: transitonContext, config: self.config, contianerView: self.container)
+        self.popupProtocol?.dismiss(with: transitonContext, config: self.config, contianerView: self.container, completion: nil)
     }
     
 }
 
 extension JFPopupController: JFPopupAnimationProtocol {
-    public func present(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView) {
-        JFPopupAnimation.present(with: transitonContext, config: self.config, contianerView: contianerView)
+    
+    public func dismiss(with transitonContext: UIViewControllerContextTransitioning?, config: JFPopupConfig, contianerView: UIView?, completion: ((Bool) -> ())?) {
+        JFPopupAnimation.dismiss(with: transitonContext, config: self.config, contianerView: contianerView, completion: completion)
     }
     
-    public func dismiss(with transitonContext: UIViewControllerContextTransitioning, config: JFPopupConfig, contianerView: UIView?) {
-        JFPopupAnimation.dismiss(with: transitonContext, config: self.config, contianerView: self.container)
+    public func present(with transitonContext: UIViewControllerContextTransitioning?, config: JFPopupConfig, contianerView: UIView, completion: ((Bool) -> ())?) {
+        JFPopupAnimation.present(with: transitonContext, config: self.config, contianerView: contianerView, completion: completion)
     }
 }

@@ -10,21 +10,6 @@ import UIKit
 /// popup va custom view use in view, not controller
 public extension JFPopup where Base: JFPopupView {
     
-    /// popup a actionSheet
-    /// - Parameters:
-    ///   - autoCancelAction: is true, will add cancel action in the last
-    ///   - actions: the actions item
-    @discardableResult static func actionSheet(with autoCancelAction: Bool = true, yourView: UIView? = nil, actions: @escaping (() -> [JFPopupAction])) -> JFPopupView? {
-        return self.bottomSheet(with: true, enableDrag: false, yourView: yourView) { mainContainer in
-            let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
-            v.autoDismissHandle = { [weak mainContainer] in
-                mainContainer?.dismissPopupView()
-            }
-            return v
-        }
-    }
-    
-    
     /// popup a bottomSheet with your custom view
     /// - Parameters:
     ///   - isDismissible: default true, will tap bg auto dismiss
@@ -72,68 +57,6 @@ public extension JFPopup where Base: JFPopupView {
         config.bgColor = bgColor
         return self.custom(with: config, yourView: yourView) { mainContainer in
             container(mainContainer)
-        }
-    }
-    
-    static func toast(hit: String) {
-        self.toast {
-            [.hit(hit)]
-        }
-    }
-    
-    static func toast(hit: String, icon: JFToastAssetIconType) {
-        self.toast {
-            [.hit(hit),.icon(icon)]
-        }
-    }
-    
-    @discardableResult static func toast(options: () -> [JFToastOption]) -> JFPopupView? {
-        let allOptions = options()
-        var msg: String?
-        var assetIcon: JFToastAssetIconType?
-        var mainView: UIView?
-        var config: JFPopupConfig = .dialog
-        config.bgColor = .clear
-        config.enableUserInteraction = false
-        config.enableAutoDismiss = true
-        config.isDismissible = false
-        for option in allOptions {
-            switch option {
-            case .hit(let hit):
-                msg = hit
-                break
-            case .icon(let icon):
-                assetIcon = icon
-                break
-            case .enableUserInteraction(let enable):
-                config.enableUserInteraction = enable
-                break
-            case .enableAutoDismiss(let autoDismiss):
-                config.enableAutoDismiss = autoDismiss
-                break
-            case .autoDismissDuration(let duration):
-                config.autoDismissDuration = duration
-                break
-            case .bgColor(let bgColor):
-                config.bgColor = bgColor
-                break
-            case .mainContainer(let view):
-                mainView = view
-                break
-            case .withoutAnimation(let without):
-                config.withoutAnimation = without
-                break
-            case .position(let pos):
-                config.toastPosition = pos
-                break
-            }
-        }
-        guard msg != nil || assetIcon != nil else {
-            assert(msg != nil || assetIcon != nil, "msg or assetIcon only can one value nil")
-            return nil
-        }
-        return self.custom(with: config, yourView: mainView) { mainContainer in
-            JFToastView(with: JFToastConfig(title: msg, assetIcon: assetIcon))
         }
     }
     

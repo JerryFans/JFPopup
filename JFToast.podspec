@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint JFPopup.podspec' to ensure this is a
+# Be sure to run `pod lib lint JFToast.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'JFPopup'
+  s.name             = 'JFToast'
   s.version          = '1.2.0'
-  s.summary          = 'A Swift Popup Module help you popup your custom view easily'
+  s.summary          = 'JFToast is a part of JFPopup Module help you popup toast view easily In Swift'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,12 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                       *JFPopup can help you popup your custom view with any way*
-                       *Like popup a Drawer, a dialog, a bottomSheet,*
-                       *Also support Objc, but you should writeJFPopup  extension with youself, usage see example.
-                       *Support many General Kit:
-                       *Version 1.0.0 support a Wechat Style ActionSheet
-                       *In the feature, will support more popup view like UIAlertView
+                       *support three position, top center and bottom*
+                       *support only hint*
+                       *support only icon*
+                       *support hint + icon*
                        DESC
 
   s.homepage         = 'https://github.com/JerryFans/JFPopup'
@@ -35,7 +33,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'JFPopup/Classes/**/*'
+  s.source_files = 'JFPopup/Classes/Core/*','JFPopup/Classes/General/Toast/*'
   
   s.swift_version = ['4.0']
   

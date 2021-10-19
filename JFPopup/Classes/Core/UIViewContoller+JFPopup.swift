@@ -16,22 +16,6 @@ public extension JFPopup where Base: UIViewController {
         }
     }
     
-    
-    /// popup a actionSheet
-    /// - Parameters:
-    ///   - autoCancelAction: is true, will add cancel action in the last
-    ///   - actions: the actions item
-    func actionSheet(with autoCancelAction: Bool = true, actions: (() -> [JFPopupAction])) {
-        self.bottomSheet(with: true, enableDrag: false) {
-            let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
-            v.autoDismissHandle = {
-                dismiss()
-            }
-            return v
-        }
-    }
-    
-    
     /// popup a bottomSheet with your custom view
     /// - Parameters:
     ///   - isDismissible: default true, will tap bg auto dismiss

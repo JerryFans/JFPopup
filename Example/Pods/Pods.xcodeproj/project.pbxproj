@@ -118,6 +118,7 @@
 		AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JRBaseKit-dummy.m"; sourceTree = "<group>"; };
 		B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+JFColor.swift"; path = "Classes/UIImage+JFColor.swift"; sourceTree = "<group>"; };
 		B1B36EEEBEEF82136D5ADCBB9B234FF6 /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
+		B4551086271ECE9C00ACCAE4 /* JFToast.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JFToast.podspec; sourceTree = "<group>"; };
 		B49C32FB271D84C0001C29AC /* JFPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
 		B49C32FD271E9740001C29AC /* UIView+JFPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+JFPopup.swift"; sourceTree = "<group>"; };
 		B49C3305271EC1BF001C29AC /* JFToastView+Objc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JFToastView+Objc.swift"; sourceTree = "<group>"; };
@@ -379,6 +380,7 @@
 		E728C76FCD1859147F17F7CEC26AB280 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				B4551086271ECE9C00ACCAE4 /* JFToast.podspec */,
 				F3B75A218B3155E1789F427F3951D0F8 /* JFPopup.podspec */,
 				FD6180B897B17B9BD4570D35C5BA8AAF /* LICENSE */,
 				16D27AFAC342796FD1FDC67C64A376B3 /* README.md */,

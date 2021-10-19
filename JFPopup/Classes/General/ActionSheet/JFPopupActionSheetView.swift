@@ -7,6 +7,38 @@
 
 import UIKit
 
+public extension JFPopup where Base: UIViewController {
+    /// popup a actionSheet
+    /// - Parameters:
+    ///   - autoCancelAction: is true, will add cancel action in the last
+    ///   - actions: the actions item
+    func actionSheet(with autoCancelAction: Bool = true, actions: (() -> [JFPopupAction])) {
+        self.bottomSheet(with: true, enableDrag: false) {
+            let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
+            v.autoDismissHandle = {
+                dismiss()
+            }
+            return v
+        }
+    }
+}
+
+public extension JFPopup where Base: JFPopupView {
+    /// popup a actionSheet
+    /// - Parameters:
+    ///   - autoCancelAction: is true, will add cancel action in the last
+    ///   - actions: the actions item
+    @discardableResult static func actionSheet(with autoCancelAction: Bool = true, yourView: UIView? = nil, actions: @escaping (() -> [JFPopupAction])) -> JFPopupView? {
+        return self.bottomSheet(with: true, enableDrag: false, yourView: yourView) { mainContainer in
+            let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
+            v.autoDismissHandle = { [weak mainContainer] in
+                mainContainer?.dismissPopupView()
+            }
+            return v
+        }
+    }
+}
+
 class JFPopupActionView: UIView {
     
     var clickActionHandle: (() -> ())?

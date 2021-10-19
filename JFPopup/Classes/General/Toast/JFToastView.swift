@@ -19,12 +19,6 @@ public enum JFToastOption {
     case position(JFToastPosition)
 }
 
-public enum JFToastPosition {
-    case center
-    case top
-    case bottom
-}
-
 public enum JFToastAssetIconType {
     
     case success

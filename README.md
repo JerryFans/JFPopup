@@ -165,7 +165,13 @@ JFPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFPopup', '1.1.0'
+pod 'JFPopup', '1.2.0'
+```
+
+If You Only want to popup a Toast you can pod part of JFPopup
+
+```ruby
+pod 'JFToast', '1.2.0'
 ```
 
 ## Author

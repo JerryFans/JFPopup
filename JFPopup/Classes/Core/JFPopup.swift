@@ -83,6 +83,12 @@ public enum JFTimerDuration {
     }
 }
 
+public enum JFToastPosition {
+    case center
+    case top
+    case bottom
+}
+
 public struct JFPopupConfig {
     
     ///background view colod

@@ -69,7 +69,44 @@ self.popup.bottomSheet {
 
 ### 通用组件
 
-v1.0,暂时只有一款微信风格ActionSheet, 基于上面bottomSheet打造，后续会基于上面基础popup,打造更多基础组件
+- v1.0,暂时只有一款微信风格ActionSheet, 基于上面bottomSheet打造，后续会基于上面基础popup,打造更多基础组件
+
+- v1.1 新增JFToastView, 支持多种Toast
+
+### Toast
+
+```
+1、only hit
+
+JFPopupView.popup.toast(hit: "普通toast,默认superview可以响应")
+
+2、 hit + icon (内置success和fail, 支持自定义)
+
+JFPopupView.popup.toast(hit: "支付成功", icon: .success)
+
+
+JFPopupView.popup.toast(hit: "自定义Icon", icon: .imageName(name: "face"))
+
+3、完全自定义
+
+JFPopupView.popup.toast {
+            [
+                .hit("不响应super view,带背景色,加大时长,不用动画，在当前view弹出,position top"),
+                .enableUserInteraction(true),
+                .bgColor(UIColor.jf.rgb(0x000000,alpha: 0.3)),
+                .autoDismissDuration(.seconds(value: 3)),
+                .mainContainer(self.view),
+                .withoutAnimation(true),
+                .position(.top)
+            ]
+        }
+
+```
+
+![](http://image.jerryfans.com/toast.gif)
+
+
+### ActionSheet
 
 ```
 self.popup.actionSheet {
@@ -128,7 +165,7 @@ JFPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFPopup', '1.0.0'
+pod 'JFPopup', '1.1.0'
 ```
 
 ## Author
@@ -138,4 +175,5 @@ JerryFans, fanjiarong_haohao@163.com
 ## License
 
 JFPopup is available under the MIT license. See the LICENSE file for more info.
+
 

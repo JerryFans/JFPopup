@@ -80,26 +80,6 @@ public extension JFPopup where Base: UIViewController {
         self.custom(with: config, container: container)
     }
     
-    func toast(msg: String? = nil, assetIcon: JFToastAssetIconType? = nil) {
-        guard msg != nil || assetIcon != nil else {
-            assert(msg != nil || assetIcon != nil, "msg or assetIcon only can one value nil")
-            return
-        }
-        var config: JFPopupConfig = .dialog
-        config.bgColor = .clear
-        config.withoutAnimation = true
-        config.enableUserInteraction = false
-        let v = JFPopupView(with: config) { mainContainer in
-            JFToastView(with: JFToastConfig(title: msg, assetIcon: assetIcon))
-        }
-        v.popup()
-        //vc 模式无法穿透手势，慎用  toast 一般直接addSubview 不需要vc模式 modal
-//        self.custom(with: config) {
-//            JFToastView(with: JFToastConfig(title: msg, assetIcon: assetIcon))
-//        }
-    }
-    
-    
     /// popup a custom view with custom config
     /// - Parameters:
     ///   - config: popup config

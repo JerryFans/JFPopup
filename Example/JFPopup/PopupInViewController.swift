@@ -141,6 +141,7 @@ class PopupInViewController: UIViewController {
         // mainContainer 在当前view 弹出， 默认 keywindow
         // mainContainer in current view popup， default is keywindow
         // withoutAnimation 不用动画
+        // enableUserInteraction 如果 true 相当于mask遮挡superview手势 不能触发
         JFPopupView.popup.toast {
             [
                 .hit("不响应super view,带背景色,加大时长,不用动画，在当前view弹出,position top"),

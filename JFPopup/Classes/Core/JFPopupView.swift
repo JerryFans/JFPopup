@@ -96,6 +96,7 @@ public extension JFPopup where Base: JFPopupView {
         config.bgColor = .clear
         config.enableUserInteraction = false
         config.enableAutoDismiss = true
+        config.isDismissible = false
         for option in allOptions {
             switch option {
             case .hit(let hit):

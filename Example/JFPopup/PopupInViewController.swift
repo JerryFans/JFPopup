@@ -11,6 +11,7 @@ import JFPopup
 
 class PopupInViewController: UIViewController {
     
+    var count = 0
     let frame = CGRect(x: 15, y: 0, width: CGSize.jf.screenWidth() - 30, height: itemHeight)
     var originY: CGFloat = 0
     
@@ -97,7 +98,7 @@ class PopupInViewController: UIViewController {
         let btn5 = self.buildButton(withTitle: "add to window view")
         btn5.addTarget(self, action: #selector(clickAction5), for: .touchUpInside)
         
-        self.buildLabel(withTitle: "Toast (v1.1 add)")
+        self.buildLabel(withTitle: "Toast Usage (v1.1 add)")
         
         let btn6 = self.buildButton(withTitle: "普通toast,默认superview可以响应")
         btn6.addTarget(self, action: #selector(clickAction6), for: .touchUpInside)
@@ -111,6 +112,38 @@ class PopupInViewController: UIViewController {
         let btn9 = self.buildButton(withTitle: "自定义Icon,可以没文本")
         btn9.addTarget(self, action: #selector(clickAction9), for: .touchUpInside)
         
+        self.buildLabel(withTitle: "Loading Usage (v1.3 add)")
+        
+        let btn10 = self.buildButton(withTitle: "常规不带文字")
+        btn10.addTarget(self, action: #selector(clickAction10), for: .touchUpInside)
+        
+        let btn11 = self.buildButton(withTitle: "带文字")
+        btn11.addTarget(self, action: #selector(clickAction11), for: .touchUpInside)
+        
+        let btn12 = self.buildButton(withTitle: "loading in view")
+        btn12.addTarget(self, action: #selector(clickAction12), for: .touchUpInside)
+    }
+    
+    @objc func clickAction10() {
+        JFPopupView.popup.loading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
+    }
+    
+    @objc func clickAction11() {
+        JFPopupView.popup.loading(hit: "正在载入视频")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
+    }
+    
+    @objc func clickAction12() {
+        //只支持 controller.view, 默认keywindow
+        JFPopupView.popup.loading(hit: "加载中", inView: self.view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
     }
     
     @objc func clickAction3() {

@@ -7,6 +7,9 @@
 
 import UIKit
 
+//only loading style have queue
+var JFLoadingViewsQueue: [JFToastQueueTask] = []
+
 public enum JFToastOption {
     case hit(String)
     case icon(JFToastAssetIconType)
@@ -17,6 +20,9 @@ public enum JFToastOption {
     case mainContainer(UIView)
     case withoutAnimation(Bool)
     case position(JFToastPosition)
+    case enableRotation(Bool)
+    case contentInset(UIEdgeInsets)
+    case itemSpacing(CGFloat)
 }
 
 public enum JFToastAssetIconType {
@@ -40,6 +46,9 @@ public enum JFToastAssetIconType {
 public struct JFToastConfig {
     var title: String?
     var assetIcon: JFToastAssetIconType?
+    var enableRotation: Bool = false
+    var contentInset: UIEdgeInsets = .init(top: 12, left: 25, bottom: 12, right: 25)
+    var itemSpacing: CGFloat = 5.0
 }
 
 public class JFToastView: UIView {
@@ -64,7 +73,7 @@ public class JFToastView: UIView {
     lazy var verStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [self.iconImgView,self.titleLabel])
         stackView.alignment = .center
-        stackView.spacing = 5
+        stackView.spacing = self.config.itemSpacing
         stackView.axis = .vertical
         stackView.distribution = .fill
         return stackView
@@ -85,14 +94,14 @@ public class JFToastView: UIView {
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: CGSize.jf.screenWidth(), y: CGSize.jf.screenHeight(), width: CGSize.jf.screenWidth(), height: CGSize.jf.screenHeight()))
         self.layer.cornerRadius = 10
-        self.backgroundColor = UIColor.jf.rgb(0x09081B)
+        self.backgroundColor = UIColor(red: 59 / 255.0, green: 59 / 255.0, blue: 59 / 255.0, alpha: 1)
     }
     
     func configSubview() {
         self.addSubview(self.verStackView)
         self.verStackView.translatesAutoresizingMaskIntoConstraints = false
         self.verStackView.addConstraints([
-            NSLayoutConstraint(item: self.titleLabel, attribute: .width, relatedBy: .lessThanOrEqual, toItem: nil, attribute: .width, multiplier: 1, constant: CGSize.jf.screenWidth() - 30 - 50),
+            NSLayoutConstraint(item: self.titleLabel, attribute: .width, relatedBy: .lessThanOrEqual, toItem: nil, attribute: .width, multiplier: 1, constant: CGSize.jf.screenWidth() - 30 - self.config.contentInset.left - self.config.contentInset.right),
         ])
         self.addConstraints(
             [
@@ -113,21 +122,42 @@ public class JFToastView: UIView {
         self.layoutIfNeeded()
         let titleSize = self.titleLabel.frame.size
         let iconSize  = self.iconImgView.frame.size
-        var height: CGFloat = 24
-        var width = max(titleSize.width, iconSize.width) + CGFloat(50)
+        var height: CGFloat = self.config.contentInset.bottom + self.config.contentInset.top
+        let horInset = CGFloat(self.config.contentInset.left + self.config.contentInset.right)
+        var contentWidth = max(titleSize.width, iconSize.width)
+        if iconSize.width > 0 && iconSize.width + horInset > titleSize.width {
+            contentWidth = iconSize.width
+        }
+        var width = contentWidth + horInset
         
         if  titleSize != .zero {
             height += titleSize.height
         }
         
         if iconSize != .zero {
-            height += titleSize != .zero ? 5 : 0
+            height += titleSize != .zero ? self.config.itemSpacing : 0
             height += iconSize.height
             if titleSize == .zero {
                 width = height
             }
         }
         self.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        if config.enableRotation {
+            self.addRotationAnimation()
+        }
+    }
+    
+    func addRotationAnimation() {
+        if self.iconImgView.layer.animationKeys() == nil {
+            let baseAni = CABasicAnimation(keyPath: "transform.rotation.z")
+            let toValue: CGFloat = .pi * 2.0
+            baseAni.toValue = toValue
+            baseAni.duration = 1.0
+            baseAni.isCumulative = true
+            baseAni.repeatCount = MAXFLOAT
+            baseAni.isRemovedOnCompletion = false
+            self.iconImgView.layer.add(baseAni, forKey: "rotationAnimation")
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -151,6 +181,65 @@ public class JFToastView: UIView {
 }
 
 public extension JFPopup where Base: JFPopupView {
+    
+    static func hideLoading() {
+        
+        let work = DispatchWorkItem {
+            let firstTask = JFLoadingViewsQueue.first
+            if firstTask != nil {
+                JFLoadingViewsQueue.removeFirst()
+            }
+            if let v = firstTask?.popupView {
+                v.dismissPopupView()
+                if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig {
+                    let popupView = JFPopupView.popup.custom(with: config, yourView: nextTask.mainContainer) { mainContainer in
+                        JFToastView(with: toastConfig)
+                    }
+                    nextTask.popupView = popupView
+                }
+            }
+        }
+        
+        if Thread.current == Thread.main {
+            work.perform()
+        } else {
+            DispatchQueue.main.async(execute: work)
+        }
+        
+    }
+    
+    static func loading() {
+        self.loading(hit: nil)
+    }
+    
+    static func loading(hit: String?) {
+        self.loading(hit: hit, inView: nil)
+    }
+    
+    
+    ///show loading view
+    /// - Parameters:
+    ///   - hit: message
+    ///   - inView: only support keywindow or ontroller.view, default keywindow
+    static func loading(hit: String?, inView: UIView?) {
+        var options: [JFToastOption] = [
+            .enableAutoDismiss(false),
+            .icon(.imageName(name: "jf_loading")),
+            .enableRotation(true),
+            .itemSpacing(15)]
+        options += [.enableUserInteraction(true)]
+        if let view = inView {
+            options += [.mainContainer(view)]
+        }
+        if let hit = hit {
+            options += [.hit(hit)]
+            options += [.contentInset(.init(top: 30, left: 47, bottom: 30, right: 47))]
+        } else {
+            options += [.contentInset(.init(top: 35, left: 35, bottom: 35, right: 35))]
+        }
+        JFPopupView.popup.toast { options }
+    }
+    
     static func toast(hit: String) {
         self.toast {
             [.hit(hit)]
@@ -165,10 +254,9 @@ public extension JFPopup where Base: JFPopupView {
     
     @discardableResult static func toast(options: () -> [JFToastOption]) -> JFPopupView? {
         let allOptions = options()
-        var msg: String?
-        var assetIcon: JFToastAssetIconType?
         var mainView: UIView?
         var config: JFPopupConfig = .dialog
+        var toastConfig = JFToastConfig()
         config.bgColor = .clear
         config.enableUserInteraction = false
         config.enableAutoDismiss = true
@@ -176,10 +264,10 @@ public extension JFPopup where Base: JFPopupView {
         for option in allOptions {
             switch option {
             case .hit(let hit):
-                msg = hit
+                toastConfig.title = hit
                 break
             case .icon(let icon):
-                assetIcon = icon
+                toastConfig.assetIcon = icon
                 break
             case .enableUserInteraction(let enable):
                 config.enableUserInteraction = enable
@@ -202,14 +290,31 @@ public extension JFPopup where Base: JFPopupView {
             case .position(let pos):
                 config.toastPosition = pos
                 break
+            case .enableRotation(let enable):
+                toastConfig.enableRotation = enable
+                break
+            case .contentInset(let inset):
+                toastConfig.contentInset = inset
+                break
+            case .itemSpacing(let spcaing):
+                toastConfig.itemSpacing = spcaing
+                break
             }
         }
-        guard msg != nil || assetIcon != nil else {
-            assert(msg != nil || assetIcon != nil, "msg or assetIcon only can one value nil")
+            guard toastConfig.title != nil || toastConfig.assetIcon != nil else {
+                assert(toastConfig.title != nil || toastConfig.assetIcon != nil, "title or assetIcon only can one value nil")
             return nil
         }
-        return self.custom(with: config, yourView: mainView) { mainContainer in
-            JFToastView(with: JFToastConfig(title: msg, assetIcon: assetIcon))
+        guard JFLoadingViewsQueue.count == 0 || config.enableAutoDismiss == true else {
+            JFLoadingViewsQueue.append(JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: nil))
+            return nil
         }
+        let popupView = self.custom(with: config, yourView: mainView) { mainContainer in
+            JFToastView(with: toastConfig)
+        }
+        if config.enableAutoDismiss == false {
+            JFLoadingViewsQueue.append(JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: popupView))
+        }
+        return popupView
     }
 }

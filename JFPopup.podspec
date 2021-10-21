@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFPopup'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'A Swift Popup Module help you popup your custom view easily'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,9 @@ Pod::Spec.new do |s|
                        *Also support Objc, but you should writeJFPopup  extension with youself, usage see example.
                        *Support many General Kit:
                        *Version 1.0.0 support a Wechat Style ActionSheet
-                       *In the feature, will support more popup view like UIAlertView
+                       *Version 1.2.0 support a ToastView
+                       *Version 1.3.0 support a LodingView
+                       *In the feature, will support more popup view
                        DESC
 
   s.homepage         = 'https://github.com/JerryFans/JFPopup'

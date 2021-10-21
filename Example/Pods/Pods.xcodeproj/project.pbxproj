@@ -7,151 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17DF2F57110EDEA63BD4C353BBCAD08E /* UIViewContoller+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9B27652E63D01C7F9E0396CD6975A8 /* UIViewContoller+JFPopup.swift */; };
-		244EFAD9595BC35F0BEC5E61710E7E90 /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */; };
-		293651BE6B3FA52524080F57FEC21A47 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */; };
-		2FA4355E45A83CC9DC0F2EFAE83A0487 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
+		0B279F60F91C2A86A74DF85BD36DB035 /* JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */; };
+		0F3BF1091124A2A89EA3B09C54A6F8DE /* JFToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97431F0DFF7F62AB912A24831005DE1D /* JFToastView.swift */; };
+		151E1B2867F3C407DA9920318B8EACFF /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */; };
+		1B046D38423B110C81F6BBCCB7B67203 /* JFAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9154D81DA8F26E942A5D1646B0466 /* JFAlertView.swift */; };
+		223C40F673109D547644691AED255436 /* JFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26F123B2CFB9BCD81291D4CD61640AA1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */; };
+		3373AB7C35BA35359CDE82ECB543D31F /* JFPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */; };
+		34F74E873FCE9A1A728CD8595FDBB461 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
+		37F2CD9D50F3810D8D9C08B58B2A9876 /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */; };
+		397F3D827C6FD39DC0529E55218E2789 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA529D6DB21C55502763490097067BE1 /* success@2x.png */; };
 		39CC66CFDD89FBCD99B8500C782645BC /* Pods-JFPopup_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A40E578FCA581541034FF38E3DC5570 /* Pods-JFPopup_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D55B27230A8147E6EC69F7C899EB308 /* fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7DC2CEC37DAAC33B8010F4CF4327BB1 /* fail@2x.png */; };
+		5150CACDC80ACB20CCC69D32F3E1E19A /* UIViewContoller+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */; };
 		53FDE09074E4BF1D08A94786BCA57F1D /* Pods-JFPopup_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB105868DFCBC70F759D140D595851C /* Pods-JFPopup_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B40C1DD8E7FEEC1933446F8D731F353 /* JFPopup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */; };
-		5D819C47309613838C655E46E2170771 /* JFPopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018893583B4140AB74778C9034053869 /* JFPopupAnimation.swift */; };
-		6A0E5858FDF94017B3DBECC69DE5EFE1 /* JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367A367062BCFC8852DCF435990AB96 /* JFPopup.swift */; };
-		6C39F44EE7466A20510937D27A456D69 /* JFPopupActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AFFB3FBD153A9DB1FF56BB8771769 /* JFPopupActionSheetView.swift */; };
-		7F02102EAE68C6BB1F40BF02B187390D /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */; };
-		83E3E3B955685CAD88AFFB7D098BB558 /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */; };
-		844CA0FB13E354EBFDF4BD7609BF438E /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89D063D1D87E26AAE93C265D0795D025 /* JFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D3AF0E483EECA777AC9EB407F780FF /* JFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B49C32FC271D84C0001C29AC /* JFPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C32FB271D84C0001C29AC /* JFPopupView.swift */; };
-		B49C32FE271E9740001C29AC /* UIView+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C32FD271E9740001C29AC /* UIView+JFPopup.swift */; };
-		B49C3306271EC1BF001C29AC /* JFToastView+Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C3305271EC1BF001C29AC /* JFToastView+Objc.swift */; };
+		56351B8B7829D1828E765F12348BA9BC /* jf_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */; };
+		591F71B9FDC069C83EAA4F670C2690F2 /* JFPopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */; };
+		5DC27CADE162BE204C92ED41A445F188 /* JRBaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD14DFCEC51A307B1A60AE018C120D7A /* JRBaseKit.framework */; };
+		609BDA94BC340D28DE7A6272A0EACBA2 /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6874F03DA8B41305B31400927FC95BB8 /* JFPopupActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC0A9621B47C790BCD64E91769DA8B /* JFPopupActionSheetView.swift */; };
+		6DF705B668CB618DF2810799AB4457DE /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */; };
+		6E073C2F705DD5BA11667205924D15B9 /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */; };
+		6ECFEAD39CCE071B7C7629CC2F9CB802 /* JFPopup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */; };
+		88EC4A1FEBD1E304F3897CAE6990747B /* JFToastView+Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42AF9A98E1131A6526277AA64EE8E4 /* JFToastView+Objc.swift */; };
+		9342EED9E1B93CF80A7778BA3574B38E /* fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */; };
+		974A7211E0A6683690ABB970D1C8D609 /* UIView+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */; };
+		9E46697963F5C9371CDAB7A0ADEE7BDF /* JFPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */; };
+		B43A365527216D020088DA67 /* JFToastQueueTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A365427216D020088DA67 /* JFToastQueueTask.swift */; };
 		B49EE55CB3A9DB919B6563650F3ABBF4 /* Pods-JFPopup_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36009E1F43F28F037D6A3A63693E5D73 /* Pods-JFPopup_Tests-dummy.m */; };
 		BB4E282B114615F2CE3DC695A70A6F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
-		BE0AF9002956C00DBB632E1DD99211AC /* JFPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625D2AA08B6DDC4C7148BDA48721EA1F /* JFPopupController.swift */; };
-		C0260FC60FDA6293DAE6C26FC5D365E8 /* JFPopupAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3DCC954986797AC2E49FEAFF1265F5 /* JFPopupAction.swift */; };
+		BE451AC29812C6D94AB2E72AABD41481 /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */; };
 		C06FA5A156F4B2907648912DBFE22A2B /* Pods-JFPopup_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B748E203B6560840E268AF2D60C58C5C /* Pods-JFPopup_Example-dummy.m */; };
-		C6A6A624D87D09FEF9D60ED86A2DED9A /* JFToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B28C315419AE3CDBBB4C46FFF590D /* JFToastView.swift */; };
-		D038E0528DE9AC804B759C53D3BDDF1C /* JRBaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD14DFCEC51A307B1A60AE018C120D7A /* JRBaseKit.framework */; };
+		C978E6A3C62C02812517CEA9E3606869 /* JFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */; };
+		D017A25D5A168593B2B05A97DA828B31 /* JFPopupAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BD32A383EDB5FD1F33DA18C39D6FE /* JFPopupAction.swift */; };
+		D3E31AD2443948F7B250DD6544D15B86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
 		D9F6EC4E79F54218F4B0897B323CE706 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
-		DCA216584A919B93796862CA5AC12B84 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208744EF08C680DB1E685BDF2DB7346D /* success@2x.png */; };
-		DDD2E8682F73DC87F868CC6487D029CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
-		F08220CABE72225474EC9E5DD1ACE782 /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */; };
-		F7E129B44662FF7400554CC232A11F76 /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */; };
-		FBE1417F88774E617CFFC93338745AA7 /* JFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FD69A278ED871079566EFE6F3D12EB /* JFPopup-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09D2E61BFE8D3C41A86210E81755E361 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40BB1AE80DB2C8F4929DB7E13EE49B32;
-			remoteInfo = JFPopup;
-		};
-		49745A1856F66DD3F8B0EA2786F46EDE /* PBXContainerItemProxy */ = {
+		062E17F536F5FB2D0238458F08FCB359 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EDE1E6FD7401647CC8F2BBB30393A18A;
 			remoteInfo = "JFPopup-JFPopup";
 		};
-		6B8CD64B0AB8B3065C5150FD19E79B7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
-			remoteInfo = JRBaseKit;
-		};
-		8B5B08006D8A1F95B3498115F574D701 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
-			remoteInfo = JRBaseKit;
-		};
-		AE7A1ECAE66623FC712F064A07ECA1E9 /* PBXContainerItemProxy */ = {
+		6A681C57F00EBB35C919793690944002 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5069901AD446E988AD5DB4FD6296E7F2;
 			remoteInfo = "Pods-JFPopup_Example";
 		};
+		92ACB51094F7B924B8484E5B5290E16A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40BB1AE80DB2C8F4929DB7E13EE49B32;
+			remoteInfo = JFPopup;
+		};
+		C0E5DCAB18EDE7A43F7A9A75A236B3F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
+			remoteInfo = JRBaseKit;
+		};
+		D2D152F0C9505F48A3DC4335813E5DEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D56538E6467ED03E10BFE3D7E918159;
+			remoteInfo = JRBaseKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D3AF0E483EECA777AC9EB407F780FF /* JFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-umbrella.h"; sourceTree = "<group>"; };
-		018893583B4140AB74778C9034053869 /* JFPopupAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAnimation.swift; sourceTree = "<group>"; };
+		0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "fail@2x.png"; path = "JFPopup/Assets/fail@2x.png"; sourceTree = "<group>"; };
 		0A40E578FCA581541034FF38E3DC5570 /* Pods-JFPopup_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFPopup_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1022D177860BAFBC5AF473EE933765AE /* Pods-JFPopup_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Tests-Info.plist"; sourceTree = "<group>"; };
+		11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.debug.xcconfig; sourceTree = "<group>"; };
 		152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.release.xcconfig; sourceTree = "<group>"; };
-		16D27AFAC342796FD1FDC67C64A376B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1D3B28C315419AE3CDBBB4C46FFF590D /* JFToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastView.swift; sourceTree = "<group>"; };
-		208744EF08C680DB1E685BDF2DB7346D /* success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "success@2x.png"; path = "JFPopup/Assets/success@2x.png"; sourceTree = "<group>"; };
-		25FD69A278ED871079566EFE6F3D12EB /* JFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFPopup-dummy.m"; sourceTree = "<group>"; };
-		2A9B27652E63D01C7F9E0396CD6975A8 /* UIViewContoller+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+JFPopup.swift"; sourceTree = "<group>"; };
+		2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAnimation.swift; sourceTree = "<group>"; };
 		2F6888A77AD2C30F7AC104B3A3B264DC /* JFPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		330B008E166793D5B8156708833791BD /* Pods-JFPopup_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFPopup_Tests.modulemap"; sourceTree = "<group>"; };
+		3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jf_loading@2x.png"; path = "JFPopup/Assets/jf_loading@2x.png"; sourceTree = "<group>"; };
 		36009E1F43F28F037D6A3A63693E5D73 /* Pods-JFPopup_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFPopup_Tests-dummy.m"; sourceTree = "<group>"; };
+		3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFPopup-dummy.m"; sourceTree = "<group>"; };
+		3AC9154D81DA8F26E942A5D1646B0466 /* JFAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFAlertView.swift; sourceTree = "<group>"; };
 		3F99408C1C35EDB555D40B2749A23121 /* Pods-JFPopup_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFPopup_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JRBaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4204C6E9298899ED1418C4F7C7862BF9 /* JFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFPopup.modulemap; sourceTree = "<group>"; };
 		4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Size+Extenison.swift"; path = "Classes/Size+Extenison.swift"; sourceTree = "<group>"; };
 		4D951F210E603505F5AD5F4AE3D52FA4 /* JRBaseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JRBaseKit-Info.plist"; sourceTree = "<group>"; };
+		50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+JFPopup.swift"; sourceTree = "<group>"; };
+		559BAEA00022D98C7737CB5091D7C1B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		580FAD10447A789BA4C7856017A8B814 /* Pods-JFPopup_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5AFDAB1C72A28624140A17B2D4572D8B /* Pods-JFPopup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		625D2AA08B6DDC4C7148BDA48721EA1F /* JFPopupController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupController.swift; sourceTree = "<group>"; };
-		6611D9FA2E24DBAAE319D987956CE6E2 /* JFPopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.release.xcconfig; sourceTree = "<group>"; };
+		5C42AF9A98E1131A6526277AA64EE8E4 /* JFToastView+Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFToastView+Objc.swift"; sourceTree = "<group>"; };
+		5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.release.xcconfig; sourceTree = "<group>"; };
+		739BD32A383EDB5FD1F33DA18C39D6FE /* JFPopupAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAction.swift; sourceTree = "<group>"; };
 		77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-umbrella.h"; sourceTree = "<group>"; };
 		788E00C2B4D4B100B793A1C0E18DEFE9 /* JRBaseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JRBaseKit.modulemap; sourceTree = "<group>"; };
-		8367A367062BCFC8852DCF435990AB96 /* JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopup.swift; sourceTree = "<group>"; };
+		7AC983C4797C055410D9BEB0D08A4279 /* JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFPopup-Info.plist"; sourceTree = "<group>"; };
+		7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+JFPopup.swift"; sourceTree = "<group>"; };
 		842F16635DD77E3410A648A5524D4E70 /* Pods-JFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.debug.xcconfig; sourceTree = "<group>"; };
 		89C18E1597ED7EF1544B35C76F41ADC4 /* Pods-JFPopup_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFPopup_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8BFBA7E31278FC5E08E053D67A3F1F3D /* Pods-JFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8CE57D21F966BB2EA4113E8FA856692F /* JFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-prefix.pch"; sourceTree = "<group>"; };
+		97431F0DFF7F62AB912A24831005DE1D /* JFToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastView.swift; sourceTree = "<group>"; };
+		978650DFD7FECFF2418FA77A8C613066 /* JFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JFPopup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B73DB52130A6150A5C5D8FC45A05354 /* Pods-JFPopup_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFPopup_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9BD9693C876627FC96A20C034BE16E7F /* JFPopup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5E76102A54E683A2522739BC8012348 /* Pods_JFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7DC2CEC37DAAC33B8010F4CF4327BB1 /* fail@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "fail@2x.png"; path = "JFPopup/Assets/fail@2x.png"; sourceTree = "<group>"; };
 		AEB83D04F62B6E67D9A26546449FD410 /* Pods-JFPopup_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JRBaseKit-dummy.m"; sourceTree = "<group>"; };
+		AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupController.swift; sourceTree = "<group>"; };
 		B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+JFColor.swift"; path = "Classes/UIImage+JFColor.swift"; sourceTree = "<group>"; };
 		B1B36EEEBEEF82136D5ADCBB9B234FF6 /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
-		B4551086271ECE9C00ACCAE4 /* JFToast.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JFToast.podspec; sourceTree = "<group>"; };
-		B4551087271ED5D800ACCAE4 /* JFActionSheet.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JFActionSheet.podspec; sourceTree = "<group>"; };
-		B49C32FB271D84C0001C29AC /* JFPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
-		B49C32FD271E9740001C29AC /* UIView+JFPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+JFPopup.swift"; sourceTree = "<group>"; };
-		B49C3305271EC1BF001C29AC /* JFToastView+Objc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JFToastView+Objc.swift"; sourceTree = "<group>"; };
+		B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
+		B43A365427216D020088DA67 /* JFToastQueueTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFToastQueueTask.swift; sourceTree = "<group>"; };
+		B54A2ABC98DAFB305DEF05FB41ED1816 /* JFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFPopup.modulemap; sourceTree = "<group>"; };
 		B748E203B6560840E268AF2D60C58C5C /* Pods-JFPopup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFPopup_Example-dummy.m"; sourceTree = "<group>"; };
 		C2123BF2FC521732298D894AC4D0D692 /* Pods-JFPopup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFPopup_Example.modulemap"; sourceTree = "<group>"; };
 		C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JFRect.swift"; path = "Classes/UIView+JFRect.swift"; sourceTree = "<group>"; };
-		C35AFFB3FBD153A9DB1FF56BB8771769 /* JFPopupActionSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupActionSheetView.swift; sourceTree = "<group>"; };
-		C4E7A7C8905A178319CA87A7C51D9A59 /* JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFPopup-Info.plist"; sourceTree = "<group>"; };
 		C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA529D6DB21C55502763490097067BE1 /* success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "success@2x.png"; path = "JFPopup/Assets/success@2x.png"; sourceTree = "<group>"; };
 		CD14DFCEC51A307B1A60AE018C120D7A /* JRBaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JRBaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JF.swift; path = Classes/JF.swift; sourceTree = "<group>"; };
+		D1FA5109C346A8DF89A978BA6D4A21A9 /* JFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-prefix.pch"; sourceTree = "<group>"; };
 		D340037178C3D879D6BD1BBA65A224E8 /* Pods_JFPopup_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFPopup_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D34BB06B61FA666A30891C122B7031AE /* ResourceBundle-JFPopup-JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFPopup-JFPopup-Info.plist"; sourceTree = "<group>"; };
+		E2C5832044DBE23407CC9E649A4DB783 /* ResourceBundle-JFPopup-JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFPopup-JFPopup-Info.plist"; sourceTree = "<group>"; };
 		E586F7510A81381EBEB2AC44B7D0D1E4 /* Pods-JFPopup_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-umbrella.h"; sourceTree = "<group>"; };
 		EBB9B45B64303BAF13943582D2FC6FD8 /* Pods-JFPopup_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Example-Info.plist"; sourceTree = "<group>"; };
+		EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopup.swift; sourceTree = "<group>"; };
 		EEB105868DFCBC70F759D140D595851C /* Pods-JFPopup_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFPopup_Example-umbrella.h"; sourceTree = "<group>"; };
-		EF3DCC954986797AC2E49FEAFF1265F5 /* JFPopupAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAction.swift; sourceTree = "<group>"; };
-		F3B75A218B3155E1789F427F3951D0F8 /* JFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JFPopup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FD6180B897B17B9BD4570D35C5BA8AAF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F5DC0A9621B47C790BCD64E91769DA8B /* JFPopupActionSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupActionSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D2A3DFE3B03CBB9AC178E5B4138A5A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDD2E8682F73DC87F868CC6487D029CD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52F74DDFB485E14ECB503A02EF54F086 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,37 +163,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8635C645841D43959A3657F06F7815CF /* Frameworks */ = {
+		6B60BF443351678F680FFB927750D1F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA4355E45A83CC9DC0F2EFAE83A0487 /* Foundation.framework in Frameworks */,
-				D038E0528DE9AC804B759C53D3BDDF1C /* JRBaseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2A08403C17F142ECE01B8364D3EAAAD /* Frameworks */ = {
+		6CFDB2F58A20B8EBFFD12F72A676952B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E31AD2443948F7B250DD6544D15B86 /* Foundation.framework in Frameworks */,
+				5DC27CADE162BE204C92ED41A445F188 /* JRBaseKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFECF193768F7F92663458285E8A2B1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F74E873FCE9A1A728CD8595FDBB461 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C2A42A713637D507DAE70416D2676C7 /* JFPopup */ = {
+		05F3F6F202F8FD11B3E5910A1612118F /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				A7DC2CEC37DAAC33B8010F4CF4327BB1 /* fail@2x.png */,
-				208744EF08C680DB1E685BDF2DB7346D /* success@2x.png */,
-				E3BB3C1B575728E6A4A3D70A425A1210 /* Core */,
-				8FE2347386E34349AC2E746CCBAE69DB /* General */,
-				E728C76FCD1859147F17F7CEC26AB280 /* Pod */,
-				4DC4954C087D54D9936F76C6A78B8C86 /* Support Files */,
+				97431F0DFF7F62AB912A24831005DE1D /* JFToastView.swift */,
+				5C42AF9A98E1131A6526277AA64EE8E4 /* JFToastView+Objc.swift */,
+				B43A365427216D020088DA67 /* JFToastQueueTask.swift */,
 			);
-			name = JFPopup;
-			path = ../..;
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		2602FF1AF1C6AAC2DFDA6390B7D6A75F /* Products */ = {
@@ -228,13 +227,15 @@
 			path = "../Target Support Files/JRBaseKit";
 			sourceTree = "<group>";
 		};
-		30821CAE59C354D74BBFB6F9CA675985 /* Toast */ = {
+		48433376C4BD3AF16349F423E32E07C9 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				1D3B28C315419AE3CDBBB4C46FFF590D /* JFToastView.swift */,
-				B49C3305271EC1BF001C29AC /* JFToastView+Objc.swift */,
+				BA00520211CEDD93BC331CC6C32226E5 /* ActionSheet */,
+				D2F50C7790EC88419607BF4E05563156 /* Alert */,
+				05F3F6F202F8FD11B3E5910A1612118F /* Toast */,
 			);
-			path = Toast;
+			name = General;
+			path = JFPopup/Classes/General;
 			sourceTree = "<group>";
 		};
 		496266D29CE0DBC59B8137D95497FF5E /* Pods-JFPopup_Example */ = {
@@ -262,31 +263,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4DC4954C087D54D9936F76C6A78B8C86 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4204C6E9298899ED1418C4F7C7862BF9 /* JFPopup.modulemap */,
-				25FD69A278ED871079566EFE6F3D12EB /* JFPopup-dummy.m */,
-				C4E7A7C8905A178319CA87A7C51D9A59 /* JFPopup-Info.plist */,
-				8CE57D21F966BB2EA4113E8FA856692F /* JFPopup-prefix.pch */,
-				00D3AF0E483EECA777AC9EB407F780FF /* JFPopup-umbrella.h */,
-				9BD9693C876627FC96A20C034BE16E7F /* JFPopup.debug.xcconfig */,
-				6611D9FA2E24DBAAE319D987956CE6E2 /* JFPopup.release.xcconfig */,
-				D34BB06B61FA666A30891C122B7031AE /* ResourceBundle-JFPopup-JFPopup-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JFPopup";
-			sourceTree = "<group>";
-		};
-		4EA62EFCFD33C82F3D584EA10D64C1EB /* ActionSheet */ = {
-			isa = PBXGroup;
-			children = (
-				EF3DCC954986797AC2E49FEAFF1265F5 /* JFPopupAction.swift */,
-				C35AFFB3FBD153A9DB1FF56BB8771769 /* JFPopupActionSheetView.swift */,
-			);
-			path = ActionSheet;
-			sourceTree = "<group>";
-		};
 		5193B6A47284C637BDBC6BCD53218E77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +270,20 @@
 				49C866BE5A57F1B09EDEB6181243BA83 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		608050420DAA377B3EBC5BE5660D0886 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */,
+				2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */,
+				AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */,
+				B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */,
+				50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */,
+				7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */,
+			);
+			name = Core;
+			path = JFPopup/Classes/Core;
 			sourceTree = "<group>";
 		};
 		64F737B7C066BC05D4A6C7662F3D5641 /* JRBaseKit */ = {
@@ -307,6 +297,15 @@
 				29E41D4EDF129531B97A3ABA4EDBFE50 /* Support Files */,
 			);
 			path = JRBaseKit;
+			sourceTree = "<group>";
+		};
+		6939DF391458DE897EC1885FBE162668 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				978650DFD7FECFF2418FA77A8C613066 /* JFPopup.podspec */,
+				559BAEA00022D98C7737CB5091D7C1B1 /* LICENSE */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		77FCF0BEC149D646A5AED7E0C4094986 /* Pods-JFPopup_Tests */ = {
@@ -325,16 +324,6 @@
 			path = "Target Support Files/Pods-JFPopup_Tests";
 			sourceTree = "<group>";
 		};
-		8FE2347386E34349AC2E746CCBAE69DB /* General */ = {
-			isa = PBXGroup;
-			children = (
-				4EA62EFCFD33C82F3D584EA10D64C1EB /* ActionSheet */,
-				30821CAE59C354D74BBFB6F9CA675985 /* Toast */,
-			);
-			name = General;
-			path = JFPopup/Classes/General;
-			sourceTree = "<group>";
-		};
 		9DAFE0EE10C0086AFED618DCE82F6283 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,10 +333,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C4E03983BB3E62DAFFBAAD1560E12B08 /* Development Pods */ = {
+		ADE961863A7CF567ACCF4677C42C74DE /* JFPopup */ = {
 			isa = PBXGroup;
 			children = (
-				1C2A42A713637D507DAE70416D2676C7 /* JFPopup */,
+				0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */,
+				3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */,
+				CA529D6DB21C55502763490097067BE1 /* success@2x.png */,
+				608050420DAA377B3EBC5BE5660D0886 /* Core */,
+				48433376C4BD3AF16349F423E32E07C9 /* General */,
+				6939DF391458DE897EC1885FBE162668 /* Pod */,
+				CFAE67BE1529C420B33C050F22EBFF67 /* Support Files */,
+			);
+			name = JFPopup;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BA00520211CEDD93BC331CC6C32226E5 /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				739BD32A383EDB5FD1F33DA18C39D6FE /* JFPopupAction.swift */,
+				F5DC0A9621B47C790BCD64E91769DA8B /* JFPopupActionSheetView.swift */,
+			);
+			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		BBC30DF649B05668D27FEBAB079B1C60 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADE961863A7CF567ACCF4677C42C74DE /* JFPopup */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -356,7 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C4E03983BB3E62DAFFBAAD1560E12B08 /* Development Pods */,
+				BBC30DF649B05668D27FEBAB079B1C60 /* Development Pods */,
 				5193B6A47284C637BDBC6BCD53218E77 /* Frameworks */,
 				F5AE739F11EED52842C522581B0A2692 /* Pods */,
 				2602FF1AF1C6AAC2DFDA6390B7D6A75F /* Products */,
@@ -364,30 +377,28 @@
 			);
 			sourceTree = "<group>";
 		};
-		E3BB3C1B575728E6A4A3D70A425A1210 /* Core */ = {
+		CFAE67BE1529C420B33C050F22EBFF67 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8367A367062BCFC8852DCF435990AB96 /* JFPopup.swift */,
-				018893583B4140AB74778C9034053869 /* JFPopupAnimation.swift */,
-				625D2AA08B6DDC4C7148BDA48721EA1F /* JFPopupController.swift */,
-				2A9B27652E63D01C7F9E0396CD6975A8 /* UIViewContoller+JFPopup.swift */,
-				B49C32FB271D84C0001C29AC /* JFPopupView.swift */,
-				B49C32FD271E9740001C29AC /* UIView+JFPopup.swift */,
+				B54A2ABC98DAFB305DEF05FB41ED1816 /* JFPopup.modulemap */,
+				3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */,
+				7AC983C4797C055410D9BEB0D08A4279 /* JFPopup-Info.plist */,
+				D1FA5109C346A8DF89A978BA6D4A21A9 /* JFPopup-prefix.pch */,
+				EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */,
+				11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */,
+				5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */,
+				E2C5832044DBE23407CC9E649A4DB783 /* ResourceBundle-JFPopup-JFPopup-Info.plist */,
 			);
-			name = Core;
-			path = JFPopup/Classes/Core;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JFPopup";
 			sourceTree = "<group>";
 		};
-		E728C76FCD1859147F17F7CEC26AB280 /* Pod */ = {
+		D2F50C7790EC88419607BF4E05563156 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				B4551087271ED5D800ACCAE4 /* JFActionSheet.podspec */,
-				B4551086271ECE9C00ACCAE4 /* JFToast.podspec */,
-				F3B75A218B3155E1789F427F3951D0F8 /* JFPopup.podspec */,
-				FD6180B897B17B9BD4570D35C5BA8AAF /* LICENSE */,
-				16D27AFAC342796FD1FDC67C64A376B3 /* README.md */,
+				3AC9154D81DA8F26E942A5D1646B0466 /* JFAlertView.swift */,
 			);
-			name = Pod;
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		F5AE739F11EED52842C522581B0A2692 /* Pods */ = {
@@ -401,27 +412,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1BFEBC5F5519173865DDD43DACADF18E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89D063D1D87E26AAE93C265D0795D025 /* JFPopup-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3549BBF0D549FD686C093C3D97702FC1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				844CA0FB13E354EBFDF4BD7609BF438E /* JRBaseKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6B31F1F16DF2DB8A4E468DE1997C93E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				53FDE09074E4BF1D08A94786BCA57F1D /* Pods-JFPopup_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7180B2DE9B0422F01FAF3BB2A5FF2ADC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223C40F673109D547644691AED255436 /* JFPopup-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,17 +436,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E323AC211E7FD5C2E28633087F94FFB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609BDA94BC340D28DE7A6272A0EACBA2 /* JRBaseKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4246041E337ACAA3CB12D737DC422164 /* Build configuration list for PBXNativeTarget "JRBaseKit" */;
+			buildConfigurationList = F153A29911C56A629EAC5759B1E30779 /* Build configuration list for PBXNativeTarget "JRBaseKit" */;
 			buildPhases = (
-				3549BBF0D549FD686C093C3D97702FC1 /* Headers */,
-				EDC96E783D8296A4C6ABD715D44B1482 /* Sources */,
-				4D2A3DFE3B03CBB9AC178E5B4138A5A7 /* Frameworks */,
-				96CA6E8143D842FC87BCBBB367B7F39F /* Resources */,
+				E323AC211E7FD5C2E28633087F94FFB2 /* Headers */,
+				ADAA943BC2A4A9C4B9FE2BA46432500B /* Sources */,
+				EFECF193768F7F92663458285E8A2B1D /* Frameworks */,
+				5D09ACCE036CCCE43AB719D2C5EEEDE3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -466,7 +477,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				80DF1914FA6A93FB61A8101D8C296D65 /* PBXTargetDependency */,
+				388AE64DC99AA3E3A53A4E6D6E92FBE5 /* PBXTargetDependency */,
 			);
 			name = "Pods-JFPopup_Tests";
 			productName = "Pods-JFPopup_Tests";
@@ -475,18 +486,18 @@
 		};
 		40BB1AE80DB2C8F4929DB7E13EE49B32 /* JFPopup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3398598A505A27DA43D4960A8699AD05 /* Build configuration list for PBXNativeTarget "JFPopup" */;
+			buildConfigurationList = 03A4CA9EADB0A74BBDA23A91471DB1D7 /* Build configuration list for PBXNativeTarget "JFPopup" */;
 			buildPhases = (
-				1BFEBC5F5519173865DDD43DACADF18E /* Headers */,
-				C1858F893E3C6F1FC906484E61F3A8F2 /* Sources */,
-				8635C645841D43959A3657F06F7815CF /* Frameworks */,
-				86F42F191FC83AEC641187797147DB24 /* Resources */,
+				7180B2DE9B0422F01FAF3BB2A5FF2ADC /* Headers */,
+				B4548089038D7DC85CD392DC508626A1 /* Sources */,
+				6CFDB2F58A20B8EBFFD12F72A676952B /* Frameworks */,
+				3BBDB8349DC19870A0FE61964CA8C59A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D3391F345484F4AD8C7FFAC27C64977D /* PBXTargetDependency */,
-				FDA1ADA81274003A9F3F0896C1CC1A9C /* PBXTargetDependency */,
+				B37ADA31BD04851AEE4E18BE3744625B /* PBXTargetDependency */,
+				2B2DFC78379326C837057D7CF403FF64 /* PBXTargetDependency */,
 			);
 			name = JFPopup;
 			productName = JFPopup;
@@ -505,8 +516,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				3B2DC2CB6B23C731860A041E7D7357E8 /* PBXTargetDependency */,
-				4F16EA3FCE52513911D98DB2812ADDF5 /* PBXTargetDependency */,
+				8884B2D049CC3FCF792F661ABCA156D7 /* PBXTargetDependency */,
+				2F94E174E703891E08BA6D4EA2AEC341 /* PBXTargetDependency */,
 			);
 			name = "Pods-JFPopup_Example";
 			productName = "Pods-JFPopup_Example";
@@ -515,11 +526,11 @@
 		};
 		EDE1E6FD7401647CC8F2BBB30393A18A /* JFPopup-JFPopup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96D630E93332BBE495D42AC3C585583A /* Build configuration list for PBXNativeTarget "JFPopup-JFPopup" */;
+			buildConfigurationList = 882280F539BA971AA60D312E0E3B68D7 /* Build configuration list for PBXNativeTarget "JFPopup-JFPopup" */;
 			buildPhases = (
-				E60CA52958233846E8C0ED968D86D1AB /* Sources */,
-				F2A08403C17F142ECE01B8364D3EAAAD /* Frameworks */,
-				B414CEF49C9E3EE1BE04E919B9A9DF10 /* Resources */,
+				977CE83BAD75A7171324A2699D4198C7 /* Sources */,
+				6B60BF443351678F680FFB927750D1F0 /* Frameworks */,
+				B6F3F891BCFC8033BAB1438B18CFB7CF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -562,27 +573,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86F42F191FC83AEC641187797147DB24 /* Resources */ = {
+		3BBDB8349DC19870A0FE61964CA8C59A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B40C1DD8E7FEEC1933446F8D731F353 /* JFPopup.bundle in Resources */,
+				6ECFEAD39CCE071B7C7629CC2F9CB802 /* JFPopup.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96CA6E8143D842FC87BCBBB367B7F39F /* Resources */ = {
+		5D09ACCE036CCCE43AB719D2C5EEEDE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B414CEF49C9E3EE1BE04E919B9A9DF10 /* Resources */ = {
+		B6F3F891BCFC8033BAB1438B18CFB7CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D55B27230A8147E6EC69F7C899EB308 /* fail@2x.png in Resources */,
-				DCA216584A919B93796862CA5AC12B84 /* success@2x.png in Resources */,
+				9342EED9E1B93CF80A7778BA3574B38E /* fail@2x.png in Resources */,
+				56351B8B7829D1828E765F12348BA9BC /* jf_loading@2x.png in Resources */,
+				397F3D827C6FD39DC0529E55218E2789 /* success@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,109 +631,113 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1858F893E3C6F1FC906484E61F3A8F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B49C3306271EC1BF001C29AC /* JFToastView+Objc.swift in Sources */,
-				FBE1417F88774E617CFFC93338745AA7 /* JFPopup-dummy.m in Sources */,
-				6A0E5858FDF94017B3DBECC69DE5EFE1 /* JFPopup.swift in Sources */,
-				C0260FC60FDA6293DAE6C26FC5D365E8 /* JFPopupAction.swift in Sources */,
-				6C39F44EE7466A20510937D27A456D69 /* JFPopupActionSheetView.swift in Sources */,
-				5D819C47309613838C655E46E2170771 /* JFPopupAnimation.swift in Sources */,
-				BE0AF9002956C00DBB632E1DD99211AC /* JFPopupController.swift in Sources */,
-				C6A6A624D87D09FEF9D60ED86A2DED9A /* JFToastView.swift in Sources */,
-				17DF2F57110EDEA63BD4C353BBCAD08E /* UIViewContoller+JFPopup.swift in Sources */,
-				B49C32FC271D84C0001C29AC /* JFPopupView.swift in Sources */,
-				B49C32FE271E9740001C29AC /* UIView+JFPopup.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E60CA52958233846E8C0ED968D86D1AB /* Sources */ = {
+		977CE83BAD75A7171324A2699D4198C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDC96E783D8296A4C6ABD715D44B1482 /* Sources */ = {
+		ADAA943BC2A4A9C4B9FE2BA46432500B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E129B44662FF7400554CC232A11F76 /* JF.swift in Sources */,
-				7F02102EAE68C6BB1F40BF02B187390D /* JRBaseKit-dummy.m in Sources */,
-				244EFAD9595BC35F0BEC5E61710E7E90 /* Size+Extenison.swift in Sources */,
-				293651BE6B3FA52524080F57FEC21A47 /* UIColor+Extension.swift in Sources */,
-				F08220CABE72225474EC9E5DD1ACE782 /* UIImage+JFColor.swift in Sources */,
-				83E3E3B955685CAD88AFFB7D098BB558 /* UIView+JFRect.swift in Sources */,
+				6DF705B668CB618DF2810799AB4457DE /* JF.swift in Sources */,
+				BE451AC29812C6D94AB2E72AABD41481 /* JRBaseKit-dummy.m in Sources */,
+				151E1B2867F3C407DA9920318B8EACFF /* Size+Extenison.swift in Sources */,
+				26F123B2CFB9BCD81291D4CD61640AA1 /* UIColor+Extension.swift in Sources */,
+				6E073C2F705DD5BA11667205924D15B9 /* UIImage+JFColor.swift in Sources */,
+				37F2CD9D50F3810D8D9C08B58B2A9876 /* UIView+JFRect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4548089038D7DC85CD392DC508626A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B046D38423B110C81F6BBCCB7B67203 /* JFAlertView.swift in Sources */,
+				C978E6A3C62C02812517CEA9E3606869 /* JFPopup-dummy.m in Sources */,
+				0B279F60F91C2A86A74DF85BD36DB035 /* JFPopup.swift in Sources */,
+				D017A25D5A168593B2B05A97DA828B31 /* JFPopupAction.swift in Sources */,
+				6874F03DA8B41305B31400927FC95BB8 /* JFPopupActionSheetView.swift in Sources */,
+				591F71B9FDC069C83EAA4F670C2690F2 /* JFPopupAnimation.swift in Sources */,
+				3373AB7C35BA35359CDE82ECB543D31F /* JFPopupController.swift in Sources */,
+				9E46697963F5C9371CDAB7A0ADEE7BDF /* JFPopupView.swift in Sources */,
+				88EC4A1FEBD1E304F3897CAE6990747B /* JFToastView+Objc.swift in Sources */,
+				B43A365527216D020088DA67 /* JFToastQueueTask.swift in Sources */,
+				0F3BF1091124A2A89EA3B09C54A6F8DE /* JFToastView.swift in Sources */,
+				974A7211E0A6683690ABB970D1C8D609 /* UIView+JFPopup.swift in Sources */,
+				5150CACDC80ACB20CCC69D32F3E1E19A /* UIViewContoller+JFPopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B2DC2CB6B23C731860A041E7D7357E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JFPopup;
-			target = 40BB1AE80DB2C8F4929DB7E13EE49B32 /* JFPopup */;
-			targetProxy = 09D2E61BFE8D3C41A86210E81755E361 /* PBXContainerItemProxy */;
-		};
-		4F16EA3FCE52513911D98DB2812ADDF5 /* PBXTargetDependency */ = {
+		2B2DFC78379326C837057D7CF403FF64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JRBaseKit;
 			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
-			targetProxy = 6B8CD64B0AB8B3065C5150FD19E79B7A /* PBXContainerItemProxy */;
+			targetProxy = C0E5DCAB18EDE7A43F7A9A75A236B3F9 /* PBXContainerItemProxy */;
 		};
-		80DF1914FA6A93FB61A8101D8C296D65 /* PBXTargetDependency */ = {
+		2F94E174E703891E08BA6D4EA2AEC341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JRBaseKit;
+			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
+			targetProxy = D2D152F0C9505F48A3DC4335813E5DEE /* PBXContainerItemProxy */;
+		};
+		388AE64DC99AA3E3A53A4E6D6E92FBE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JFPopup_Example";
 			target = 5069901AD446E988AD5DB4FD6296E7F2 /* Pods-JFPopup_Example */;
-			targetProxy = AE7A1ECAE66623FC712F064A07ECA1E9 /* PBXContainerItemProxy */;
+			targetProxy = 6A681C57F00EBB35C919793690944002 /* PBXContainerItemProxy */;
 		};
-		D3391F345484F4AD8C7FFAC27C64977D /* PBXTargetDependency */ = {
+		8884B2D049CC3FCF792F661ABCA156D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JFPopup;
+			target = 40BB1AE80DB2C8F4929DB7E13EE49B32 /* JFPopup */;
+			targetProxy = 92ACB51094F7B924B8484E5B5290E16A /* PBXContainerItemProxy */;
+		};
+		B37ADA31BD04851AEE4E18BE3744625B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "JFPopup-JFPopup";
 			target = EDE1E6FD7401647CC8F2BBB30393A18A /* JFPopup-JFPopup */;
-			targetProxy = 49745A1856F66DD3F8B0EA2786F46EDE /* PBXContainerItemProxy */;
-		};
-		FDA1ADA81274003A9F3F0896C1CC1A9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JRBaseKit;
-			target = 1D56538E6467ED03E10BFE3D7E918159 /* JRBaseKit */;
-			targetProxy = 8B5B08006D8A1F95B3498115F574D701 /* PBXContainerItemProxy */;
+			targetProxy = 062E17F536F5FB2D0238458F08FCB359 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00BE229AB53F03A03D3DADEE7C6E2400 /* Debug */ = {
+		169D1AEA713540125AC79A6C4F59809D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD9693C876627FC96A20C034BE16E7F /* JFPopup.debug.xcconfig */;
+			baseConfigurationReference = 11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFPopup/JFPopup-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFPopup/JFPopup-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				IBSC_MODULE = JFPopup;
+				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JFPopup/JFPopup.modulemap";
-				PRODUCT_MODULE_NAME = JFPopup;
 				PRODUCT_NAME = JFPopup;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
+		};
+		221E86BE51C91CBBED0B8B5495365A4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				IBSC_MODULE = JFPopup;
+				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = JFPopup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -822,6 +838,37 @@
 			};
 			name = Release;
 		};
+		4F1D90C17B5E5D549046EB745493C414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JFPopup/JFPopup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFPopup/JFPopup-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JFPopup/JFPopup.modulemap";
+				PRODUCT_MODULE_NAME = JFPopup;
+				PRODUCT_NAME = JFPopup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4FD657BB029A165C0C8D5A2B209281E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AFDAB1C72A28624140A17B2D4572D8B /* Pods-JFPopup_Tests.debug.xcconfig */;
@@ -854,37 +901,96 @@
 			};
 			name = Debug;
 		};
-		53AC572FB4CDCF08832EBDC5563B0BF5 /* Release */ = {
+		59F2BD327789CA2F5B93B0A9B9EDBCA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6611D9FA2E24DBAAE319D987956CE6E2 /* JFPopup.release.xcconfig */;
+			baseConfigurationReference = 871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
-				IBSC_MODULE = JFPopup;
-				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = JFPopup;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
+				PRODUCT_MODULE_NAME = JRBaseKit;
+				PRODUCT_NAME = JRBaseKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		A3F92267DDAEF6719BBFC517F7F9FB21 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD9693C876627FC96A20C034BE16E7F /* JFPopup.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
-				IBSC_MODULE = JFPopup;
-				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = JFPopup;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		B1F3D91BBD0631FE605E91A07D1BC466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JFPopup/JFPopup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFPopup/JFPopup-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JFPopup/JFPopup.modulemap";
+				PRODUCT_MODULE_NAME = JFPopup;
+				PRODUCT_NAME = JFPopup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF5C41B5592CA94FBED63AB5DFA70A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
+				PRODUCT_MODULE_NAME = JRBaseKit;
+				PRODUCT_NAME = JRBaseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		CA49E869E66575D95D59408A0C60CBB9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1012,115 +1118,14 @@
 			};
 			name = Debug;
 		};
-		D9D3BA2EF8EDCC4A18608E3B61F2FAE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
-				PRODUCT_MODULE_NAME = JRBaseKit;
-				PRODUCT_NAME = JRBaseKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E2ACC659B619E92F7E339CC54E0A294F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JRBaseKit/JRBaseKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JRBaseKit/JRBaseKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JRBaseKit/JRBaseKit.modulemap";
-				PRODUCT_MODULE_NAME = JRBaseKit;
-				PRODUCT_NAME = JRBaseKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F9A8DFC7691F9F3AE5B9E8796AE18BAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6611D9FA2E24DBAAE319D987956CE6E2 /* JFPopup.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFPopup/JFPopup-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFPopup/JFPopup-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JFPopup/JFPopup.modulemap";
-				PRODUCT_MODULE_NAME = JFPopup;
-				PRODUCT_NAME = JFPopup;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3398598A505A27DA43D4960A8699AD05 /* Build configuration list for PBXNativeTarget "JFPopup" */ = {
+		03A4CA9EADB0A74BBDA23A91471DB1D7 /* Build configuration list for PBXNativeTarget "JFPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00BE229AB53F03A03D3DADEE7C6E2400 /* Debug */,
-				F9A8DFC7691F9F3AE5B9E8796AE18BAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4246041E337ACAA3CB12D737DC422164 /* Build configuration list for PBXNativeTarget "JRBaseKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9D3BA2EF8EDCC4A18608E3B61F2FAE9 /* Debug */,
-				E2ACC659B619E92F7E339CC54E0A294F /* Release */,
+				B1F3D91BBD0631FE605E91A07D1BC466 /* Debug */,
+				4F1D90C17B5E5D549046EB745493C414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1143,11 +1148,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96D630E93332BBE495D42AC3C585583A /* Build configuration list for PBXNativeTarget "JFPopup-JFPopup" */ = {
+		882280F539BA971AA60D312E0E3B68D7 /* Build configuration list for PBXNativeTarget "JFPopup-JFPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A3F92267DDAEF6719BBFC517F7F9FB21 /* Debug */,
-				53AC572FB4CDCF08832EBDC5563B0BF5 /* Release */,
+				169D1AEA713540125AC79A6C4F59809D /* Debug */,
+				221E86BE51C91CBBED0B8B5495365A4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1157,6 +1162,15 @@
 			buildConfigurations = (
 				4FD657BB029A165C0C8D5A2B209281E9 /* Debug */,
 				34A4EE58F13D5F86BCD3996DAC4B63FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F153A29911C56A629EAC5759B1E30779 /* Build configuration list for PBXNativeTarget "JRBaseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59F2BD327789CA2F5B93B0A9B9EDBCA3 /* Debug */,
+				BF5C41B5592CA94FBED63AB5DFA70A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

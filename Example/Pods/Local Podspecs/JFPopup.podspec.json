@@ -1,6 +1,6 @@
 {
   "name": "JFPopup",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "summary": "A Swift Popup Module help you popup your custom view easily",
   "description": "*JFPopup can help you popup your custom view with any way*\n*Like popup a Drawer, a dialog, a bottomSheet,*\n*Also support Objc, but you should writeJFPopup  extension with youself, usage see example.\n*Support many General Kit:\n*Version 1.0.0 support a Wechat Style ActionSheet\n*In the feature, will support more popup view like UIAlertView",
   "homepage": "https://github.com/JerryFans/JFPopup",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/JerryFans/JFPopup.git",
-    "tag": "1.0.0"
+    "tag": "1.2.0"
   },
   "platforms": {
     "ios": "9.0"

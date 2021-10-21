@@ -1,5 +1,5 @@
 PODS:
-  - JFPopup (1.0.0):
+  - JFPopup (1.2.0):
     - JRBaseKit (~> 0.9.0)
   - JRBaseKit (0.9.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JFPopup: 8985036a15cb4021ec35f41694a55afd3bc2c49d
+  JFPopup: 55a0cdece7ba54478568952311226abafb1add0a
   JRBaseKit: f4a95149f6b68417348e63065d384f22501cf2ce
 
 PODFILE CHECKSUM: 021adb08f3ad3359eccefa5ac5a9010de0d0e269

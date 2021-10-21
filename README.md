@@ -103,7 +103,7 @@ JFPopupView.popup.loading()
 
 ```
 
-![](http://image.jerryfans.com/loading.gif)
+![](http://image.jerryfans.com/loading1.gif)
 
 
 ### Toast

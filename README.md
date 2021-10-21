@@ -73,6 +73,39 @@ self.popup.bottomSheet {
 
 - v1.1 新增JFToastView, 支持多种Toast
 
+- v1.3 新增Loading 样式弹窗, 支持多种格式，详情看下面
+
+### Loading
+
+```
+1、only loading icon
+
+JFPopupView.popup.loading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
+        
+ 2、 loading + hit
+ 
+ JFPopupView.popup.loading(hit: "正在载入视频")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
+        
+ 3、 loading in view (default in keywindow)
+ 
+ //只支持 controller.view, 默认keywindow
+        JFPopupView.popup.loading(hit: "加载中", inView: self.view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            JFPopupView.popup.hideLoading()
+        }
+
+
+```
+
+![](http://image.jerryfans.com/loading.gif)
+
+
 ### Toast
 
 ```

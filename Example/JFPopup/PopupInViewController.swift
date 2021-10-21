@@ -128,6 +128,7 @@ class PopupInViewController: UIViewController {
         JFPopupView.popup.loading()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             JFPopupView.popup.hideLoading()
+            JFPopupView.popup.toast(hit: "刷新成功")
         }
     }
     
@@ -135,6 +136,7 @@ class PopupInViewController: UIViewController {
         JFPopupView.popup.loading(hit: "正在载入视频")
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             JFPopupView.popup.hideLoading()
+            JFPopupView.popup.toast(hit: "加载成功", icon: .success)
         }
     }
     
@@ -143,6 +145,7 @@ class PopupInViewController: UIViewController {
         JFPopupView.popup.loading(hit: "加载中", inView: self.view)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             JFPopupView.popup.hideLoading()
+            JFPopupView.popup.toast(hit: "加载失败", icon: .fail)
         }
     }
     

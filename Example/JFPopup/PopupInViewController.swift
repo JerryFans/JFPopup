@@ -25,6 +25,7 @@ class PopupInViewController: UIViewController {
     
     @discardableResult private func buildLabel(withTitle title: String) -> UILabel {
         var label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.text = title + "："
         label.textColor = UIColor.black
         self.scrollView.addSubview(label)
@@ -75,7 +76,7 @@ class PopupInViewController: UIViewController {
         lineView.jf.height = 0.5
         lineView.jf.width = actionItem.jf.width
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Popup From UIView"
@@ -122,10 +123,88 @@ class PopupInViewController: UIViewController {
         
         let btn12 = self.buildButton(withTitle: "loading in view")
         btn12.addTarget(self, action: #selector(clickAction12), for: .touchUpInside)
+        
+        self.buildLabel(withTitle: "Alert View Usage (v1.4 add)")
+        
+        let btn13 = self.buildButton(withTitle: "默认风格，自带取消按钮")
+        btn13.addTarget(self, action: #selector(clickAction13), for: .touchUpInside)
+        
+        let btn14 = self.buildButton(withTitle: "Title 和 SubTitle可以二选一,单个按钮")
+        btn14.addTarget(self, action: #selector(clickAction14), for: .touchUpInside)
+        
+        let btn15 = self.buildButton(withTitle: "完全自定义")
+        btn15.addTarget(self, action: #selector(clickAction15), for: .touchUpInside)
+        
+        let btn16 = self.buildButton(withTitle: "从VC弹出也行")
+        btn16.addTarget(self, action: #selector(clickAction16), for: .touchUpInside)
+        
+        self.scrollView.contentSize = CGSize(width: CGSize.jf.screenWidth(), height: originY + itemHeight)
+    }
+    
+    @objc func clickAction16() {
+        self.popup.alert {
+            [.title("我是从VC Present 出来的"),
+             .subTitle("用法和View一致，只是一个是self.popup.alert(self是UIViewControll)，一个是JFPopupView.popup.alert"),
+             .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "知道了")
+                })
+             ])
+            ]
+        }
+    }
+    
+    @objc func clickAction15() {
+        JFPopupView.popup.alert {[
+            .title("不同标题颜色"),
+            .titleColor(.red),
+            .withoutAnimation(true),
+            .subTitle("我是完全自定义的,标题颜色，action颜色，文本都支持修改,不带动画"),
+            .subTitleColor(.black),
+            .cancelAction([.textColor(.blue),.text("我是取消超出文本裁切"),.tapActionCallback({
+                JFPopupView.popup.toast(hit: "点击了取消")
+            })]),
+            .confirmAction([
+                .text("我是确定"),
+                .textColor(.red),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "点击了确定")
+                })
+            ])
+        ]}
+    }
+    
+    @objc func clickAction14() {
+        JFPopupView.popup.alert {[
+            .subTitle("我是Title 和 SubTitle可以二选一,单个按钮"),
+            .showCancel(false),
+            .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "我知道了")
+                })
+            ])
+        ]}
+    }
+    
+    @objc func clickAction13() {
+        JFPopupView.popup.alert {[
+            .title("温馨提示"),
+            .subTitle("我是默认风格，自带取消按钮"),
+            .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "我知道了")
+                })
+            ])
+        ]}
     }
     
     @objc func clickAction10() {
-        JFPopupView.popup.loading()
+        DispatchQueue.main.async {
+            JFPopupView.popup.loading()
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             JFPopupView.popup.hideLoading()
             JFPopupView.popup.toast(hit: "刷新成功")
@@ -199,7 +278,7 @@ class PopupInViewController: UIViewController {
         }
         JFPopupView.popup.toast { options }
     }
-                   
+    
     @objc func clickAction5() {
         self.view.popup.actionSheet {
             [
@@ -207,10 +286,10 @@ class PopupInViewController: UIViewController {
                     self?.pushVC()
                 }),
                 JFPopupAction(with: "从手机相册选择", subTitle: nil, clickActionCallBack: {
-
+                    
                 }),
                 JFPopupAction(with: "用秒剪制作视频", subTitle: nil, clickActionCallBack: {
-
+                    
                 }),
             ]
         }
@@ -223,10 +302,10 @@ class PopupInViewController: UIViewController {
                     self?.pushVC()
                 }),
                 JFPopupAction(with: "从手机相册选择", subTitle: nil, clickActionCallBack: {
-
+                    
                 }),
                 JFPopupAction(with: "用秒剪制作视频", subTitle: nil, clickActionCallBack: {
-
+                    
                 }),
             ]
         }
@@ -236,5 +315,5 @@ class PopupInViewController: UIViewController {
         let vc = OCViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
+    
 }

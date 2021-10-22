@@ -10,6 +10,7 @@ import UIKit
 extension JFPopupController: JFPopupProtocol {
     
     public func autoDismissHandle() {
+        guard self.config.enableAutoDismiss else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + self.config.autoDismissDuration.timeDuration()) {
             self.dismissPopupView()
         }

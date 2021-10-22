@@ -12,7 +12,7 @@ import JFPopup
 @objc public extension UIViewController {
 
     @objc func popup_dismiss() {
-        self.popup.dismiss()
+        self.popup.dismissPopup()
     }
 
     @objc func popup_actionSheet(with autoCancelAction: Bool = true, actions: (() -> [JFPopupAction])) {

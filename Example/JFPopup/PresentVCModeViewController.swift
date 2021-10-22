@@ -49,6 +49,7 @@ class PresentVCModeViewController: UIViewController {
     
     @discardableResult private func buildLabel(withTitle title: String) -> UILabel {
         var label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.text = title + "："
         label.textColor = UIColor.black
         self.scrollView.addSubview(label)
@@ -141,6 +142,9 @@ class PresentVCModeViewController: UIViewController {
         let btn7 = self.buildButton(withTitle: "微信ActionSheet 点击action不退出")
         btn7.addTarget(self, action: #selector(clickAction7), for: .touchUpInside)
         
+        let btn12 = self.buildButton(withTitle: "通用 Alert View From Present VC")
+        btn12.addTarget(self, action: #selector(clickAction12), for: .touchUpInside)
+        
         self.buildLabel(withTitle: "兼容OC写法")
         self.buildSubLabel(withTitle: "见UIViewController+JFPopupObjc.swift")
         
@@ -164,6 +168,19 @@ class PresentVCModeViewController: UIViewController {
         btn11.addTarget(self, action: #selector(clickAction11), for: .touchUpInside)
         
         self.scrollView.contentSize = CGSize(width: CGSize.jf.screenWidth(), height: originY + itemHeight)
+    }
+    
+    @objc func clickAction12() {
+        self.popup.alert {[
+            .title("从VC弹出alertView"),
+            .subTitle("也支持从UIView弹出，更多用法请看《从UIView弹出》示例"),
+            .confirmAction([
+                .text("过去看"),
+                .tapActionCallback({ [weak self] in
+                    self?.navigationController?.pushViewController(PopupInViewController(), animated: true)
+                })
+            ])
+        ]}
     }
     
     @objc func clickAction11() {
@@ -267,7 +284,7 @@ class PresentVCModeViewController: UIViewController {
         self.popup.drawer {
             let v = DrawerView(frame: CGRect(x: 0, y: 0, width: CGSize.jf.screenWidth(), height: CGSize.jf.screenHeight()))
             v.closeHandle = { [weak self] in
-                self?.popup.dismiss()
+                self?.popup.dismissPopup()
             }
             return v
         }

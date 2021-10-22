@@ -10,7 +10,7 @@ extension UIViewController: JFPopupCompatible {}
 
 public extension JFPopup where Base: UIViewController {
     
-    func dismiss() {
+    func dismissPopup() {
         if let navi = base.presentedViewController as? UINavigationController, let vc = navi.viewControllers.first as? JFPopupController {
             vc.closeVC(with: nil)
         }

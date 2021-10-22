@@ -16,7 +16,7 @@ public extension JFPopup where Base: UIViewController {
         self.bottomSheet(with: true, enableDrag: false) {
             let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
             v.autoDismissHandle = {
-                dismiss()
+                dismissPopup()
             }
             return v
         }

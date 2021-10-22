@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @discardableResult private func buildLabel(withTitle title: String) -> UILabel {
         var label = UILabel()
         label.text = title + "："
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.textColor = UIColor.black
         self.scrollView.addSubview(label)
         label.frame = frame
@@ -93,6 +94,8 @@ class ViewController: UIViewController {
         
         let btn2 = self.buildButton(withTitle: "Objc兼容")
         btn2.addTarget(self, action: #selector(clickAction2), for: .touchUpInside)
+        
+        self.scrollView.contentSize = CGSize(width: CGSize.jf.screenWidth(), height: originY + itemHeight)
     }
     
     @objc func clickAction2() {

@@ -301,8 +301,9 @@ public extension JFPopup where Base: JFPopupView {
                 break
             }
         }
-            guard toastConfig.title != nil || toastConfig.assetIcon != nil else {
-                assert(toastConfig.title != nil || toastConfig.assetIcon != nil, "title or assetIcon only can one value nil")
+        
+        guard toastConfig.title != nil || toastConfig.assetIcon != nil else {
+            assert(toastConfig.title != nil || toastConfig.assetIcon != nil, "title or assetIcon only can one value nil")
             return nil
         }
         guard JFLoadingViewsQueue.count == 0 || config.enableAutoDismiss == true else {

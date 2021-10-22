@@ -33,6 +33,9 @@
 		974A7211E0A6683690ABB970D1C8D609 /* UIView+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */; };
 		9E46697963F5C9371CDAB7A0ADEE7BDF /* JFPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */; };
 		B43A365527216D020088DA67 /* JFToastQueueTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A365427216D020088DA67 /* JFToastQueueTask.swift */; };
+		B471DD1727228D7B00D44CCD /* JFAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471DD1627228D7B00D44CCD /* JFAlertAction.swift */; };
+		B471DD1927229CA700D44CCD /* JFAlertView+PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471DD1827229CA700D44CCD /* JFAlertView+PopupView.swift */; };
+		B471DD1B27229CBA00D44CCD /* JFAlertView+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471DD1A27229CBA00D44CCD /* JFAlertView+UIViewController.swift */; };
 		B49EE55CB3A9DB919B6563650F3ABBF4 /* Pods-JFPopup_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36009E1F43F28F037D6A3A63693E5D73 /* Pods-JFPopup_Tests-dummy.m */; };
 		BB4E282B114615F2CE3DC695A70A6F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E646084D788B87B8CC6C3969AFF1A15F /* Foundation.framework */; };
 		BE451AC29812C6D94AB2E72AABD41481 /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */; };
@@ -125,6 +128,9 @@
 		B1B36EEEBEEF82136D5ADCBB9B234FF6 /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
 		B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
 		B43A365427216D020088DA67 /* JFToastQueueTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFToastQueueTask.swift; sourceTree = "<group>"; };
+		B471DD1627228D7B00D44CCD /* JFAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAlertAction.swift; sourceTree = "<group>"; };
+		B471DD1827229CA700D44CCD /* JFAlertView+PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JFAlertView+PopupView.swift"; sourceTree = "<group>"; };
+		B471DD1A27229CBA00D44CCD /* JFAlertView+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JFAlertView+UIViewController.swift"; sourceTree = "<group>"; };
 		B54A2ABC98DAFB305DEF05FB41ED1816 /* JFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFPopup.modulemap; sourceTree = "<group>"; };
 		B748E203B6560840E268AF2D60C58C5C /* Pods-JFPopup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFPopup_Example-dummy.m"; sourceTree = "<group>"; };
 		C2123BF2FC521732298D894AC4D0D692 /* Pods-JFPopup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFPopup_Example.modulemap"; sourceTree = "<group>"; };
@@ -396,7 +402,10 @@
 		D2F50C7790EC88419607BF4E05563156 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				B471DD1627228D7B00D44CCD /* JFAlertAction.swift */,
 				3AC9154D81DA8F26E942A5D1646B0466 /* JFAlertView.swift */,
+				B471DD1827229CA700D44CCD /* JFAlertView+PopupView.swift */,
+				B471DD1A27229CBA00D44CCD /* JFAlertView+UIViewController.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -663,10 +672,13 @@
 				591F71B9FDC069C83EAA4F670C2690F2 /* JFPopupAnimation.swift in Sources */,
 				3373AB7C35BA35359CDE82ECB543D31F /* JFPopupController.swift in Sources */,
 				9E46697963F5C9371CDAB7A0ADEE7BDF /* JFPopupView.swift in Sources */,
+				B471DD1B27229CBA00D44CCD /* JFAlertView+UIViewController.swift in Sources */,
+				B471DD1727228D7B00D44CCD /* JFAlertAction.swift in Sources */,
 				88EC4A1FEBD1E304F3897CAE6990747B /* JFToastView+Objc.swift in Sources */,
 				B43A365527216D020088DA67 /* JFToastQueueTask.swift in Sources */,
 				0F3BF1091124A2A89EA3B09C54A6F8DE /* JFToastView.swift in Sources */,
 				974A7211E0A6683690ABB970D1C8D609 /* UIView+JFPopup.swift in Sources */,
+				B471DD1927229CA700D44CCD /* JFAlertView+PopupView.swift in Sources */,
 				5150CACDC80ACB20CCC69D32F3E1E19A /* UIViewContoller+JFPopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,6 +74,80 @@ self.popup.bottomSheet {
 - v1.1 新增JFToastView, 支持多种Toast
 
 - v1.3 新增Loading 样式弹窗, 支持多种格式，详情看下面
+- v1.4 新增微信 AlertView 样式弹窗, 支持多种格式，详情看下面
+
+### AlertView
+
+1、默认风格，自带取消按钮
+
+```
+JFPopupView.popup.alert {[
+            .title("温馨提示"),
+            .subTitle("我是默认风格，自带取消按钮"),
+            .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "我知道了")
+                })
+            ])
+        ]}
+```
+
+2、Title 和 SubTitle可以二选一，不要Cancel
+
+```
+ JFPopupView.popup.alert {[
+            .subTitle("我是Title 和 SubTitle可以二选一,单个按钮"),
+            .showCancel(false),
+            .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "我知道了")
+                })
+            ])
+        ]}
+```
+
+3、自定义颜色、不用动画等
+
+```
+JFPopupView.popup.alert {[
+            .title("不同标题颜色"),
+            .titleColor(.red),
+            .withoutAnimation(true),
+            .subTitle("我是完全自定义的,标题颜色，action颜色，文本都支持修改,不带动画"),
+            .subTitleColor(.black),
+            .cancelAction([.textColor(.blue),.text("我是取消超出文本裁切"),.tapActionCallback({
+                JFPopupView.popup.toast(hit: "点击了取消")
+            })]),
+            .confirmAction([
+                .text("我是确定"),
+                .textColor(.red),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "点击了确定")
+                })
+            ])
+        ]}
+```
+
+4、也可以Present到VC 效果一样
+
+```
+//self 是 UIViewController
+ self.popup.alert {
+            [.title("我是从VC Present 出来的"),
+             .subTitle("用法和View一致，只是一个是self.popup.alert(self是UIViewControll)，一个是JFPopupView.popup.alert"),
+             .confirmAction([
+                .text("知道了"),
+                .tapActionCallback({
+                    JFPopupView.popup.toast(hit: "知道了")
+                })
+             ])
+            ]
+        }
+```
+
+![](http://image.jerryfans.com/alert.gif)
 
 ### Loading
 
@@ -104,7 +178,6 @@ JFPopupView.popup.loading()
 ```
 
 ![](http://image.jerryfans.com/loading1.gif)
-
 
 ### Toast
 
@@ -198,13 +271,7 @@ JFPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFPopup', '1.2.0'
-```
-
-If You Only want to popup a Toast you can pod part of JFPopup
-
-```ruby
-pod 'JFToast', '1.2.0'
+pod 'JFPopup', '1.4.0'
 ```
 
 ## Author
@@ -214,5 +281,4 @@ JerryFans, fanjiarong_haohao@163.com
 ## License
 
 JFPopup is available under the MIT license. See the LICENSE file for more info.
-
 

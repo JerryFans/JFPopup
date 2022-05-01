@@ -88,7 +88,7 @@ class JFPopupActionView: UIView {
         return view
     }()
     
-    let clickBtn: UIButton = {
+    lazy var clickBtn: UIButton = {
         let btn = UIButton(type: .custom)
         btn.addTarget(self, action: #selector(clickAction), for: .touchUpInside)
         btn.setBackgroundImage(UIImage.jf.color(0x000000,alpha: 0.1), for: .highlighted)

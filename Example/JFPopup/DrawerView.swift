@@ -11,7 +11,7 @@ class DrawerView: UIView {
     
     var closeHandle: (() -> ())?
 
-    let closeBtn: UIButton = {
+    lazy var closeBtn: UIButton = {
         var btn = UIButton(type: .system)
         if #available(iOS 13.0, *) {
              btn = UIButton(type: .close)

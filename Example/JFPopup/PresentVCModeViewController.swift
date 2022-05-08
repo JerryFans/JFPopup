@@ -142,6 +142,9 @@ class PresentVCModeViewController: UIViewController {
         let btn7 = self.buildButton(withTitle: "微信ActionSheet 点击action不退出")
         btn7.addTarget(self, action: #selector(clickAction7), for: .touchUpInside)
         
+        let btn13 = self.buildButton(withTitle: "微信ActionSheet Attributed SubTitle")
+        btn13.addTarget(self, action: #selector(clickAction13), for: .touchUpInside)
+        
         let btn12 = self.buildButton(withTitle: "通用 Alert View From Present VC")
         btn12.addTarget(self, action: #selector(clickAction12), for: .touchUpInside)
         
@@ -168,6 +171,18 @@ class PresentVCModeViewController: UIViewController {
         btn11.addTarget(self, action: #selector(clickAction11), for: .touchUpInside)
         
         self.scrollView.contentSize = CGSize(width: CGSize.jf.screenWidth(), height: originY + itemHeight)
+    }
+    
+    @objc func clickAction13() {
+        let highlightAttribute: [NSAttributedString.Key : Any] = [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.red]
+        let subTitle = NSAttributedString(string: "照片或视频照片", attributes: highlightAttribute)
+        self.popup.actionSheet {
+            [
+                JFPopupAction(with: "拍摄", subAttributedTitle: subTitle, clickActionCallBack: { [weak self] in
+                    self?.pushVC()
+                }),
+            ]
+        }
     }
     
     @objc func clickAction12() {
@@ -240,8 +255,12 @@ class PresentVCModeViewController: UIViewController {
     @objc func clickAction7() {
         self.popup.actionSheet {
             [
-                JFPopupAction(with: "从手机相册选择", subTitle: nil, autoDismiss: false, clickActionCallBack: {
+                JFPopupAction(with: "从手机相册选择", subTitle: nil, autoDismiss: false, clickActionCallBack: { [weak self] in
                     print("我没退出")
+                    JFPopupView.popup.toast(hit: "3s后退出")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        self?.popup.dismissPopup()
+                    }
                 }),
             ]
         }

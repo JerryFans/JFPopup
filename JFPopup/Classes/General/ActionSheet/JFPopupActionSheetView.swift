@@ -184,6 +184,12 @@ public class JFPopupActionSheetView: UIView {
                 view.subTitleLabel.sizeToFit()
                 actionHeight += 5
                 actionHeight += view.subTitleLabel.frame.size.height
+            } else if let subAttTitle = action.subAttributedTitle {
+                view.subTitleLabel.attributedText = subAttTitle
+                view.subTitleLabel.isHidden = false
+                view.subTitleLabel.sizeToFit()
+                actionHeight += 5
+                actionHeight += view.subTitleLabel.frame.size.height
             }
             view.lineView.isHidden = element.offset == (actions.count - 1)
             actionHeight += 30

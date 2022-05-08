@@ -296,9 +296,11 @@ class PopupInViewController: UIViewController {
     }
     
     @objc func clickAction4() {
+        let highlightAttribute: [NSAttributedString.Key : Any] = [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.red]
+        let subTitle = NSAttributedString(string: "照片或视频照片", attributes: highlightAttribute)
         JFPopupView.popup.actionSheet {
             [
-                JFPopupAction(with: "拍摄", subTitle: "照片或视频照片", clickActionCallBack: { [weak self] in
+                JFPopupAction(with: "拍摄", subAttributedTitle: subTitle, clickActionCallBack: { [weak self] in
                     self?.pushVC()
                 }),
                 JFPopupAction(with: "从手机相册选择", subTitle: nil, clickActionCallBack: {

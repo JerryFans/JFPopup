@@ -15,6 +15,10 @@ Support 3 way to popup, Drawer, Dialog and BottomSheet.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Toast Style Support iPhone 14 Pro+ Dynamic Island(灵动岛)
+
+![](http://image.jerryfans.com/dynamic_island_toast.gif)
+
 ## Quick Create your popup view
 
 ### Dialog 
@@ -30,6 +34,7 @@ self.popup.dialog {
 ```
 
 ![](http://image.jerryfans.com/dialog.gif)
+![](http://image.jerryfans.com/dynamic_island_toast.gif)
 
 ### Drawer
 抽屉模式，支持左右抽屉，宽度自定义，最大可以全屏，
@@ -182,6 +187,8 @@ JFPopupView.popup.loading()
 
 ### Toast
 
+已适配iPhone 14 Pro系列 灵动岛 （support dynamic island toast)
+
 ```
 1、only hit
 
@@ -211,6 +218,7 @@ JFPopupView.popup.toast {
 ```
 
 ![](http://image.jerryfans.com/toast.gif)
+![](http://image.jerryfans.com/dynamic_island_toast.gif)
 
 
 ### ActionSheet
@@ -272,7 +280,7 @@ JFPopup is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JFPopup', '1.4.0'
+pod 'JFPopup', '1.5.0'
 ```
 
 ## Author

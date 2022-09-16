@@ -28,18 +28,39 @@ class JFPopupAnimation: NSObject {
             break
         case .dialog:
             do {
-                contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: CGSize.jf.screenSize().height / 2)
-                if config.toastPosition == .top {
-                    contianerView.jf_top = CGFloat.jf.navigationBarHeight() + 15
-                } else if config.toastPosition == .bottom {
-                    contianerView.jf_bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+                let originSize = contianerView.jf.size
+                if config.toastPosition == .dynamicIsland {
+                    contianerView.jf_size = CGSize(width: 120, height: 34)
+                    contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: 27)
                 }
-                contianerView.layoutIfNeeded()
+                let updateV = {
+                    contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: CGSize.jf.screenSize().height / 2)
+                    if config.toastPosition == .top {
+                        contianerView.jf_top = CGFloat.jf.navigationBarHeight() + 15
+                    } else if config.toastPosition == .bottom {
+                        contianerView.jf_bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
+                    } else if config.toastPosition == .dynamicIsland {
+                        contianerView.jf_size = originSize
+                        contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: originSize.height / 2 + 10)
+                    }
+                    contianerView.layoutIfNeeded()
+                }
                 guard config.withoutAnimation == false else {
+                    updateV()
                     transitonContext?.completeTransition(true)
                     completion?(true)
                     return
                 }
+                if config.toastPosition == .dynamicIsland {
+                    UIView.animate(withDuration: 0.25) {
+                        updateV()
+                    } completion: { finished in
+                        transitonContext?.completeTransition(true)
+                        completion?(finished)
+                    }
+                    return
+                }
+                updateV()
                 let animation = CAKeyframeAnimation(keyPath: "transform")
                 animation.duration = 0.25
                 animation.isRemovedOnCompletion = true
@@ -103,7 +124,18 @@ class JFPopupAnimation: NSObject {
         case .dialog:
             do {
                 UIView.animate(withDuration: 0.25, animations: {
-                    contianerView?.superview?.alpha = 0
+                    if config.toastPosition == .dynamicIsland {
+                        contianerView?.layer.cornerRadius = 17
+                        contianerView?.jf_size = CGSize(width: 120, height: 34)
+                        contianerView?.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: 27)
+                    }
+                    contianerView?.subviews.forEach({ v in
+                        if config.toastPosition == .dynamicIsland {
+                            v.isHidden = true
+                        } else {
+                            v.alpha = 0
+                        }
+                    })
                     contianerView?.alpha = 0
                 }) { (finished) in
                     transitonContext?.completeTransition(true)

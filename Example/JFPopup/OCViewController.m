@@ -11,6 +11,7 @@
 
 @interface OCViewController ()
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIButton *button1;
 @end
 
 @implementation OCViewController
@@ -22,6 +23,15 @@
         [_button setBackgroundColor:UIColor.redColor];
     }
     return _button;
+}
+
+- (UIButton *)button1 {
+    if (!_button1) {
+        _button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_button1 setTitle:@"Dismiss" forState:UIControlStateNormal];
+        [_button1 setBackgroundColor:UIColor.blueColor];
+    }
+    return _button1;
 }
 
 - (void)viewDidLoad {
@@ -37,7 +47,17 @@
     [self.view addSubview:self.button];
     self.button.frame = CGRectMake(50, 150, 150, 150);
     [self.button addTarget:self action:@selector(clickMe) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.button1];
+    self.button1.frame = CGRectMake(50, 315, 150, 150);
+    [self.button1 addTarget:self action:@selector(clickMe1) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
+}
+
+- (void)clickMe1 {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)clickMe {

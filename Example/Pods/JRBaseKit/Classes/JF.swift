@@ -4,6 +4,7 @@
 //
 //  Created by JerryFans on 2021/8/4.
 //
+import UIKit
 public struct JF<Base> {
     let base: Base
     init(_ base: Base) {

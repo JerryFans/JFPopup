@@ -79,6 +79,12 @@ class PopupInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var t: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            t = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        }
+        print("safe area top: " + "\(t)")
         self.title = "Popup From UIView"
         self.view.backgroundColor = .white
         self.view.addSubview(self.scrollView)
@@ -101,7 +107,7 @@ class PopupInViewController: UIViewController {
         
         self.buildLabel(withTitle: "Toast Usage (v1.1 add)")
         
-        let btn6 = self.buildButton(withTitle: "普通toast,默认superview可以响应")
+        let btn6 = self.buildButton(withTitle: "默认toast,支持灵动岛否则默认剧中")
         btn6.addTarget(self, action: #selector(clickAction6), for: .touchUpInside)
         
         let btn7 = self.buildButton(withTitle: "自定义参数")
@@ -240,7 +246,7 @@ class PopupInViewController: UIViewController {
     }
     
     @objc func clickAction6() {
-        JFPopupView.popup.toast(hit: "普通toast,默认superview可以响应")
+        JFPopupView.popup.toast(hit: "默认toast,支持灵动岛")
     }
     
     @objc func clickAction8() {

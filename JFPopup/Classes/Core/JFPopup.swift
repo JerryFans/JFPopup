@@ -5,6 +5,22 @@
 //  Created by 逸风 on 2021/10/9.
 //
 import JRBaseKit
+
+fileprivate let supportDynamicIsLandList = [
+    "iPhone 14 Pro",
+    "iPhone 14 Pro Max"
+]
+
+public var JFIsSupportDynamicIsLand: Bool {
+    get {
+        var t: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            t = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        }
+        return t == 59.0
+    }
+}
+
 public struct JFPopup<Base> {
     public let base: Base 
     init(_ base: Base) {
@@ -87,6 +103,7 @@ public enum JFToastPosition {
     case center
     case top
     case bottom
+    case dynamicIsland
 }
 
 public struct JFPopupConfig {
@@ -112,7 +129,7 @@ public struct JFPopupConfig {
     public var autoDismissDuration: JFTimerDuration = .seconds(value: 2)
     
     ///toast view position
-    public var toastPosition: JFToastPosition = .center
+    public var toastPosition: JFToastPosition = JFIsSupportDynamicIsLand ? .dynamicIsland : .center
     
     /// static style config
     public static var dialog = JFPopupConfig(enableDrag: false)

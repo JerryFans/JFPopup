@@ -5,7 +5,6 @@
 //  Created by 逸风 on 2021/10/10.
 //
 import UIKit
-import Foundation
 
 extension UIView: JFCompatible {}
 public extension JF where Base: UIView {
@@ -59,6 +58,17 @@ public extension JF where Base: UIView {
         get { return base.jf_size }
         set { base.jf_size = newValue }
     }
+    
+    @available(iOS 10.0, *)
+    static func shake() {
+        UISelectionFeedbackGenerator().selectionChanged()
+    }
+    
+    @available(iOS 10.0, *)
+    func shake() {
+        UISelectionFeedbackGenerator().selectionChanged()
+    }
+
 }
 
 //MARK: - For OC

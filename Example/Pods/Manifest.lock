@@ -1,7 +1,7 @@
 PODS:
-  - JFPopup (1.2.0):
-    - JRBaseKit (~> 0.9.0)
-  - JRBaseKit (0.9.0)
+  - JFPopup (1.4.3):
+    - JRBaseKit (~> 1.0.0)
+  - JRBaseKit (1.0.0)
 
 DEPENDENCIES:
   - JFPopup (from `../`)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JFPopup: 55a0cdece7ba54478568952311226abafb1add0a
-  JRBaseKit: f4a95149f6b68417348e63065d384f22501cf2ce
+  JFPopup: 3b30e7db76294ba878ffb58ca9cb069a367a12d1
+  JRBaseKit: ed75cfce9e340a3316bee0eaac0fa1c400714287
 
 PODFILE CHECKSUM: 021adb08f3ad3359eccefa5ac5a9010de0d0e269
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

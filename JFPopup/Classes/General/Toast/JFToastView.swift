@@ -46,6 +46,7 @@ public enum JFToastAssetIconType {
 public struct JFToastConfig {
     var title: String?
     var assetIcon: JFToastAssetIconType?
+    var enableDynamicIsLand: Bool = false
     var enableRotation: Bool = false
     var contentInset: UIEdgeInsets = .init(top: 12, left: 25, bottom: 12, right: 25)
     var itemSpacing: CGFloat = 5.0
@@ -93,8 +94,8 @@ public class JFToastView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: CGSize.jf.screenWidth(), y: CGSize.jf.screenHeight(), width: CGSize.jf.screenWidth(), height: CGSize.jf.screenHeight()))
-        self.layer.cornerRadius = 10
-        self.backgroundColor = UIColor(red: 59 / 255.0, green: 59 / 255.0, blue: 59 / 255.0, alpha: 1)
+        self.backgroundColor = .black
+        self.layer.cornerRadius = self.config.enableDynamicIsLand ?  17 : 10
     }
     
     func configSubview() {
@@ -106,7 +107,7 @@ public class JFToastView: UIView {
         self.addConstraints(
             [
                 NSLayoutConstraint(item: self.verStackView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-                NSLayoutConstraint(item: self.verStackView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: self.verStackView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: self.config.enableDynamicIsLand ? 34 / 2 : 0),
           ]
         )
         if let title = self.config.title {
@@ -122,8 +123,9 @@ public class JFToastView: UIView {
         self.layoutIfNeeded()
         let titleSize = self.titleLabel.frame.size
         let iconSize  = self.iconImgView.frame.size
-        var height: CGFloat = self.config.contentInset.bottom + self.config.contentInset.top
+        var height: CGFloat = self.config.contentInset.bottom + self.config.contentInset.top + (self.config.enableDynamicIsLand ? 34 : 0)
         let horInset = CGFloat(self.config.contentInset.left + self.config.contentInset.right)
+        let dynamicisLandSize = 120.0 + 20.0
         var contentWidth = max(titleSize.width, iconSize.width)
         if iconSize.width > 0 && iconSize.width + horInset > titleSize.width {
             contentWidth = iconSize.width
@@ -132,6 +134,9 @@ public class JFToastView: UIView {
         
         if  titleSize != .zero {
             height += titleSize.height
+            if self.config.enableDynamicIsLand {
+                self.layer.cornerRadius = height / 2
+            }
         }
         
         if iconSize != .zero {
@@ -140,6 +145,12 @@ public class JFToastView: UIView {
             if titleSize == .zero {
                 width = height
             }
+            if self.config.enableDynamicIsLand {
+                self.layer.cornerRadius = 20
+            }
+        }
+        if self.config.enableDynamicIsLand {
+            width = max(width, dynamicisLandSize)
         }
         self.frame = CGRect(x: 0, y: 0, width: width, height: height)
         if config.enableRotation {
@@ -261,6 +272,7 @@ public extension JFPopup where Base: JFPopupView {
         config.enableUserInteraction = false
         config.enableAutoDismiss = true
         config.isDismissible = false
+        toastConfig.enableDynamicIsLand = config.toastPosition == .dynamicIsland
         for option in allOptions {
             switch option {
             case .hit(let hit):
@@ -289,6 +301,7 @@ public extension JFPopup where Base: JFPopupView {
                 break
             case .position(let pos):
                 config.toastPosition = pos
+                toastConfig.enableDynamicIsLand = config.toastPosition == .dynamicIsland && JFIsSupportDynamicIsLand
                 break
             case .enableRotation(let enable):
                 toastConfig.enableRotation = enable

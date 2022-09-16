@@ -99,7 +99,9 @@ class ViewController: UIViewController {
     }
     
     @objc func clickAction2() {
-        self.navigationController?.pushViewController(OCViewController(), animated: true)
+//        self.navigationController?.pushViewController(OCViewController(), animated: true)
+        let vc = OCViewController()
+        self.present(vc, animated: true)
     }
     
     @objc func clickAction1() {

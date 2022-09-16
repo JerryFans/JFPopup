@@ -75,6 +75,7 @@ self.popup.bottomSheet {
 
 - v1.3 新增Loading 样式弹窗, 支持多种格式，详情看下面
 - v1.4 新增微信 AlertView 样式弹窗, 支持多种格式，详情看下面
+- v1.5 JFToastView 支持iPhone14 Pro系列 灵动岛 (Toast Style Support iPhone14 Pro + Dynamic Island)
 
 ### AlertView
 

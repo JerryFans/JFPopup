@@ -32,7 +32,9 @@ public extension JFPopup where Base: UIView {
         return JFPopupView.popup.bottomSheet(with: true, enableDrag: false, yourView: base) { mainContainer in
             let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
             v.autoDismissHandle = { [weak mainContainer] in
-                mainContainer?.dismissPopupView()
+                mainContainer?.dismissPopupView(completion: { isFinished in
+                    
+                })
             }
             return v
         }
@@ -48,7 +50,9 @@ public extension JFPopup where Base: JFPopupView {
         return self.bottomSheet(with: true, enableDrag: false, yourView: yourView) { mainContainer in
             let v = JFPopupActionSheetView(with: actions(), autoCancelAction: autoCancelAction)
             v.autoDismissHandle = { [weak mainContainer] in
-                mainContainer?.dismissPopupView()
+                mainContainer?.dismissPopupView(completion: { isFinished in
+                    
+                })
             }
             return v
         }

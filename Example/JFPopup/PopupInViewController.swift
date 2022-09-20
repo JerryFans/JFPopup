@@ -127,7 +127,7 @@ class PopupInViewController: UIViewController {
         let btn11 = self.buildButton(withTitle: "带文字")
         btn11.addTarget(self, action: #selector(clickAction11), for: .touchUpInside)
         
-        let btn12 = self.buildButton(withTitle: "loading in view")
+        let btn12 = self.buildButton(withTitle: "loading in view (灵动岛会强制keywindow,因为不在最顶层会被遮挡)")
         btn12.addTarget(self, action: #selector(clickAction12), for: .touchUpInside)
         
         self.buildLabel(withTitle: "Alert View Usage (v1.4 add)")
@@ -239,7 +239,9 @@ class PopupInViewController: UIViewController {
             let view = DrawerView(frame: CGRect(x: 0, y: 0, width: CGSize.jf.screenWidth(), height: CGSize.jf.screenHeight()))
             view.backgroundColor = UIColor.jf.rgb(0x7e7eff)
             view.closeHandle = { [weak mainContainer] in
-                mainContainer?.dismissPopupView()
+                mainContainer?.dismissPopupView(completion: { isFinished in
+                    
+                })
             }
             return view
         }
@@ -250,11 +252,13 @@ class PopupInViewController: UIViewController {
     }
     
     @objc func clickAction8() {
-        let random = arc4random() % 2
+        let random = arc4random() % 3
         if random == 0 {
             JFPopupView.popup.toast(hit: "支付成功", icon: .success)
-        } else {
+        } else if random == 1 {
             JFPopupView.popup.toast(hit: "支付失败", icon: .fail)
+        } else {
+            JFPopupView.popup.toast(hit: "自定义", icon: .imageName(name: "face"))
         }
     }
     

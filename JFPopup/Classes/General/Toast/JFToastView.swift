@@ -125,7 +125,7 @@ public class JFToastView: UIView {
         let iconSize  = self.iconImgView.frame.size
         var height: CGFloat = self.config.contentInset.bottom + self.config.contentInset.top + (self.config.enableDynamicIsLand ? 34 : 0)
         let horInset = CGFloat(self.config.contentInset.left + self.config.contentInset.right)
-        let dynamicisLandSize = 120.0 + 20.0
+        let dynamicisLandSize = 120.0 + 20.0 + (iconSize == .zero ? 20 : 0)
         var contentWidth = max(titleSize.width, iconSize.width)
         if iconSize.width > 0 && iconSize.width + horInset > titleSize.width {
             contentWidth = iconSize.width
@@ -201,12 +201,13 @@ public extension JFPopup where Base: JFPopupView {
                 JFLoadingViewsQueue.removeFirst()
             }
             if let v = firstTask?.popupView {
-                v.dismissPopupView()
-                if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig {
-                    let popupView = JFPopupView.popup.custom(with: config, yourView: nextTask.mainContainer) { mainContainer in
-                        JFToastView(with: toastConfig)
+                v.dismissPopupView { isFinished in
+                    if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig {
+                        let popupView = JFPopupView.popup.custom(with: config, yourView: nextTask.mainContainer) { mainContainer in
+                            JFToastView(with: toastConfig)
+                        }
+                        nextTask.popupView = popupView
                     }
-                    nextTask.popupView = popupView
                 }
             }
         }
@@ -239,7 +240,7 @@ public extension JFPopup where Base: JFPopupView {
             .enableRotation(true),
             .itemSpacing(15)]
         options += [.enableUserInteraction(true)]
-        if let view = inView {
+        if let view = inView, !JFIsSupportDynamicIsLand {
             options += [.mainContainer(view)]
         }
         if let hit = hit {

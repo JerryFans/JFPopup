@@ -132,7 +132,9 @@ class JFAlertView: UIView {
             let action = JFAlertAction(with: cancel, defaultColor: JFAlertCancelColor)
             action.clickBtnCallBack = { [weak self] in
                 if let supV = self?.superview as? JFPopupView {
-                    supV.dismissPopupView()
+                    supV.dismissPopupView { isFinished in
+                        
+                    }
                 } else {
                     self?.clickActionHandle?()
                 }
@@ -146,7 +148,9 @@ class JFAlertView: UIView {
             let action = JFAlertAction(with: confirm, defaultColor: JFAlertSureColor)
             action.clickBtnCallBack = { [weak self] in
                 if let supV = self?.superview as? JFPopupView {
-                    supV.dismissPopupView()
+                    supV.dismissPopupView { isFinished in
+                        
+                    }
                 } else {
                     self?.clickActionHandle?()
                 }

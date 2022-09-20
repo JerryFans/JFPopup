@@ -85,18 +85,21 @@ public extension JFPopup where Base: JFPopupView {
 
 extension JFPopupView: JFPopupProtocol {
     
+    public func dismissPopupView(completion: @escaping ((Bool) -> ())) {
+        self.popupProtocol?.dismiss(with: nil, config: self.config, contianerView: self.container, completion: { [weak self] isFinished in
+            self?.removeFromSuperview()
+            completion(isFinished)
+        })
+    }
+    
     public func autoDismissHandle() {
         DispatchQueue.main.asyncAfter(deadline: .now() + self.config.autoDismissDuration.timeDuration()) {
-            self.dismissPopupView()
+            self.dismissPopupView { isFinished in
+                
+            }
         }
     }
     
-    
-    public func dismissPopupView() {
-        self.popupProtocol?.dismiss(with: nil, config: self.config, contianerView: self.container, completion: { [weak self] isFinished in
-            self?.removeFromSuperview()
-        })
-    }
     
 }
 
@@ -164,7 +167,9 @@ public class JFPopupView: UIView {
     
     @objc func tapBGAction() {
         guard self.config.isDismissible else { return }
-        self.dismissPopupView()
+        self.dismissPopupView { isFinished in
+            
+        }
     }
     
     func popup(into yourView: UIView? = nil) {

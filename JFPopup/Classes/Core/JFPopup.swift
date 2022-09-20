@@ -46,7 +46,7 @@ public protocol JFPopupProtocol {
     var container: UIView? { get set }
     var config: JFPopupConfig { get set }
     func autoDismissHandle()
-    func dismissPopupView()
+    func dismissPopupView(completion: @escaping ((_ isFinished: Bool) -> ()))
 }
 
 @objc public enum JFPopupAnimationDirection: Int {
@@ -103,7 +103,7 @@ public enum JFToastPosition {
     case center
     case top
     case bottom
-    case dynamicIsland
+    case dynamicIsland //新增灵动岛位置动画
 }
 
 public struct JFPopupConfig {

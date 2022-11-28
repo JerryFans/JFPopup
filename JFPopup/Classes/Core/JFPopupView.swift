@@ -174,7 +174,7 @@ public class JFPopupView: UIView {
     
     func popup(into yourView: UIView? = nil) {
         guard let view = self.container else { return }
-        guard let window = UIApplication.shared.windows.first else { return }
+        guard let window = UIApplication.shared.windows.first(where: \.isKeyWindow) else { return }
         if let view = yourView {
             view.addSubview(self)
         } else {

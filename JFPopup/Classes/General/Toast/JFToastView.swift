@@ -201,14 +201,7 @@ public extension JFPopup where Base: JFPopupView {
                 JFLoadingViewsQueue.removeFirst()
             }
             if let v = firstTask?.popupView {
-                v.dismissPopupView { isFinished in
-                    if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig,  config.enableAutoDismiss {
-                        let popupView = JFPopupView.popup.custom(with: config, yourView: nextTask.mainContainer) { mainContainer in
-                            JFToastView(with: toastConfig)
-                        }
-                        nextTask.popupView = popupView
-                    }
-                }
+                v.dismissPopupView { _ in }
             }
         }
         
@@ -320,8 +313,8 @@ public extension JFPopup where Base: JFPopupView {
             assert(toastConfig.title != nil || toastConfig.assetIcon != nil, "title or assetIcon only can one value nil")
             return nil
         }
-        guard JFLoadingViewsQueue.count == 0 || config.enableAutoDismiss == true else {
-            Self.safeAppendToastTask(task: JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: nil))
+        guard JFLoadingViewsQueue.count == 0 else {
+            print("only can show single loading need manual dismiss) view in the same time")
             return nil
         }
         let popupView = self.custom(with: config, yourView: mainView) { mainContainer in

@@ -45,12 +45,6 @@ class JFPopupAnimation: NSObject {
                     }
                     contianerView.layoutIfNeeded()
                 }
-                guard config.withoutAnimation == false else {
-                    updateV()
-                    transitonContext?.completeTransition(true)
-                    completion?(true)
-                    return
-                }
                 if config.toastPosition == .dynamicIsland {
                     UIView.animate(withDuration: 0.25) {
                         updateV()
@@ -61,17 +55,10 @@ class JFPopupAnimation: NSObject {
                     return
                 }
                 updateV()
-                let animation = CAKeyframeAnimation(keyPath: "transform")
-                animation.duration = 0.25
-                animation.isRemovedOnCompletion = true
-                animation.fillMode = kCAFillModeForwards
-                var values: [NSValue] = []
-                values.append(NSValue.init(caTransform3D: CATransform3DMakeScale(0.9, 0.9, 1.0)))
-                values.append(NSValue.init(caTransform3D: CATransform3DMakeScale(1.1, 1.1, 1.0)))
-                values.append(NSValue.init(caTransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)))
-                animation.values = values
-                contianerView.layer.add(animation, forKey: nil)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                contianerView.alpha = 0
+                UIView.animate(withDuration: config.withoutAnimation ? 0 : 0.25, delay: 0, options: .curveEaseInOut) {
+                    contianerView.alpha = 1
+                } completion: { finished in
                     transitonContext?.completeTransition(true)
                     completion?(true)
                 }

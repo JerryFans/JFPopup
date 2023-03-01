@@ -8,7 +8,7 @@
 import UIKit
 
 //only loading style have queue
-var JFLoadingViewsQueue: [JFToastQueueTask] = []
+private var JFLoadingViewsQueue: [JFToastQueueTask] = []
 
 public enum JFToastOption {
     case hit(String)
@@ -202,7 +202,7 @@ public extension JFPopup where Base: JFPopupView {
             }
             if let v = firstTask?.popupView {
                 v.dismissPopupView { isFinished in
-                    if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig {
+                    if let nextTask = JFLoadingViewsQueue.first, let config = nextTask.config, let toastConfig = nextTask.toastConfig,  config.enableAutoDismiss {
                         let popupView = JFPopupView.popup.custom(with: config, yourView: nextTask.mainContainer) { mainContainer in
                             JFToastView(with: toastConfig)
                         }
@@ -215,7 +215,7 @@ public extension JFPopup where Base: JFPopupView {
         if Thread.current == Thread.main {
             work.perform()
         } else {
-            DispatchQueue.main.async(execute: work)
+            DispatchQueue.main.sync(execute: work)
         }
         
     }
@@ -321,15 +321,26 @@ public extension JFPopup where Base: JFPopupView {
             return nil
         }
         guard JFLoadingViewsQueue.count == 0 || config.enableAutoDismiss == true else {
-            JFLoadingViewsQueue.append(JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: nil))
+            Self.safeAppendToastTask(task: JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: nil))
             return nil
         }
         let popupView = self.custom(with: config, yourView: mainView) { mainContainer in
             JFToastView(with: toastConfig)
         }
         if config.enableAutoDismiss == false {
-            JFLoadingViewsQueue.append(JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: popupView))
+            Self.safeAppendToastTask(task: JFToastQueueTask(with: config, toastConfig: toastConfig, mainContainer: mainView, popupView: popupView))
         }
         return popupView
+    }
+    
+    private static func safeAppendToastTask(task: JFToastQueueTask) {
+        let work = DispatchWorkItem {
+            JFLoadingViewsQueue.append(task)
+        }
+        if Thread.current == Thread.main {
+            work.perform()
+        } else {
+            DispatchQueue.main.sync(execute: work)
+        }
     }
 }

@@ -66,20 +66,20 @@ public extension JFPopup where Base: JFPopupView {
     ///   - container: your custom view
     @discardableResult static func custom(with config: JFPopupConfig, yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView?) -> JFPopupView? {
         if Thread.current != Thread.main {
-            var v: JFPopupView?
-            DispatchQueue.main.sync {
-                v = JFPopupView(with: config) { mainContainer in
+            return DispatchQueue.main.sync {
+                let v = JFPopupView(with: config) { mainContainer in
                     container(mainContainer)
                 }
-                v?.popup(into: yourView)
+                v.popup(into: yourView)
+                return v
             }
+        } else {
+            let v = JFPopupView(with: config) { mainContainer in
+                container(mainContainer)
+            }
+            v.popup(into: yourView)
             return v
         }
-        let v = JFPopupView(with: config) { mainContainer in
-            container(mainContainer)
-        }
-        v.popup(into: yourView)
-        return v
     }
 }
 

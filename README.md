@@ -82,6 +82,7 @@ self.popup.bottomSheet {
 - v1.4 新增微信 AlertView 样式弹窗, 支持多种格式，详情看下面
 - v1.5 JFToastView 支持iPhone14 Pro系列 灵动岛 (Toast Style Support iPhone14 Pro + Dynamic Island)
 - v1.5.2 修复偶现可能无法获取顶层keywindow导致的问题
+- v1.5.3 修复连续触发Loading show and hide偶现无法移除View的问题
 
 ### AlertView
 

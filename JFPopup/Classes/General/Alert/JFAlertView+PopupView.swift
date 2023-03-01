@@ -16,6 +16,7 @@ public extension JFPopup where Base: JFPopupView {
         config.enableUserInteraction = true
         config.enableAutoDismiss = false
         config.isDismissible = false
+        config.toastPosition = .center
         for option in allOptions {
             switch option {
             case .title(let string):

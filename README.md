@@ -10,6 +10,24 @@ JFPopup is a Swift Module help you popup your custom view easily.
 
 Support 3 way to popup, Drawer, Dialog and BottomSheet.
 
+## Installation
+
+### cocoapods
+
+```ruby
+pod 'JFPopup', '1.5.4'
+```
+
+### Swift Package Mangaer
+
+After 1.5.4
+
+```ruby
+
+https://github.com/JerryFans/JFPopup.git
+
+```
+
 
 ## Example
 
@@ -271,18 +289,6 @@ var config = JFPopupConfig.dialog
             return view
         }
         vc.show(with: self)
-```
-
-
-## Requirements
-
-## Installation
-
-JFPopup is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JFPopup', '1.5.3'
 ```
 
 ## Author

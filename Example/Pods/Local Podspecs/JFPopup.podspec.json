@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "JFPopup/Classes/**/*",
+  "source_files": "Sources/JFPopup/Classes/**/*",
   "swift_versions": [
     "4.0"
   ],
@@ -29,7 +29,7 @@
   },
   "resource_bundles": {
     "JFPopup": [
-      "Assets/*.png"
+      "Sources/JFPopup/Resources/*.png"
     ]
   },
   "swift_version": "4.0"

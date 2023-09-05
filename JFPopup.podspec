@@ -38,14 +38,14 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'JFPopup/Classes/**/*'
+  s.source_files = 'Sources/JFPopup/Classes/**/*'
   
   s.swift_version = ['4.0']
   
   s.dependency 'JRBaseKit', '~> 1.1.1'
   
    s.resource_bundles = {
-     'JFPopup' => ['Assets/*.png'],
+     'JFPopup' => ['Sources/JFPopup/Resources/*.png'],
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

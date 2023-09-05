@@ -37,10 +37,10 @@ Pod::Spec.new do |s|
   
   s.swift_version = ['4.0']
   
-  s.dependency 'JRBaseKit', '~> 0.9.0'
+  s.dependency 'JRBaseKit', '~> 1.1.1'
   
    s.resource_bundles = {
-     'JFPopup' => ['JFPopup/Assets/*.png'],
+     'JFPopup' => ['Assets/*.png'],
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

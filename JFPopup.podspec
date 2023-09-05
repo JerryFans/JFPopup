@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFPopup'
-  s.version          = '1.5.3'
+  s.version          = '1.5.4'
   s.summary          = 'A Swift Popup Module help you popup your custom view easily'
 
 # This description is used to generate tags and improve search results.
@@ -42,10 +42,10 @@ Pod::Spec.new do |s|
   
   s.swift_version = ['4.0']
   
-  s.dependency 'JRBaseKit', '~> 1.0.0'
+  s.dependency 'JRBaseKit', '~> 1.1.1'
   
    s.resource_bundles = {
-     'JFPopup' => ['JFPopup/Assets/*.png'],
+     'JFPopup' => ['Assets/*.png'],
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

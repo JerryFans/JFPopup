@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004515B296FFB1902F22BC4989F7851B /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA529D6DB21C55502763490097067BE1 /* success@2x.png */; };
-		099F26972206C6174BDB26E3E35E5A58 /* JFPopupActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F313102058A5E15ACF89CBA0DFA541E /* JFPopupActionSheetView.swift */; };
-		0A8591115DF5DC6FAECFA8712CEA5930 /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */; };
-		0EFFD1371ECB1D4C0317B1CDF8156078 /* JFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */; };
-		107838E049A98A686AB17D585F385F84 /* fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */; };
+		0203A7FA88FC16F006D4A746D9A0D565 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E1D5A5F0E616C10B4416F19B2600730 /* success@2x.png */; };
+		099F26972206C6174BDB26E3E35E5A58 /* JFPopupActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80921636AE49E7B67F9AE40862E70A71 /* JFPopupActionSheetView.swift */; };
+		0EFFD1371ECB1D4C0317B1CDF8156078 /* JFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8149A1C405E4E4E4363A4FEA02F58755 /* JFPopup-dummy.m */; };
+		1694A3A8479D058542599DA45210C338 /* fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D5DCED5511410EAB3FACB62BC4DDB4 /* fail@2x.png */; };
 		1CA51B964B52A1D209F3CFFFDD0CE406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2FF17A966749CCB3BA9BDAE7AE8F86C6 /* JFPopupAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4AB8B1B6D248B9A7B85F5F77CE769 /* JFPopupAction.swift */; };
-		325B667A7BFF3DE67DADE58E37C81ED7 /* JFPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */; };
+		2A3AF41601966C72DA8F3FAA82155F1D /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88ED6B83DB2DD20CF841095DA2A3F63 /* JF.swift */; };
+		2FF17A966749CCB3BA9BDAE7AE8F86C6 /* JFPopupAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20456D22901CE4904AAE5A8B751D6B1 /* JFPopupAction.swift */; };
+		325B667A7BFF3DE67DADE58E37C81ED7 /* JFPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5D11A9AAF2FE55182FA6C3A6C787F /* JFPopupView.swift */; };
 		333735B7AAB104A060B25D2BE099AB0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3E46CF74F1FD5014391C69B5ACC5B303 /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */; };
+		3B1F85F8103E364C40F3E647CFC7E51A /* jf_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DA324E172CD2115FB0DC9E68295C7B1 /* jf_loading@2x.png */; };
 		416F7097452BE3ADFD422AA163C41222 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		475F20F56FB7B25FEEF27F44D6F8172E /* JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */; };
-		4D95FA0B8355B82463B57A4AECB9C4D2 /* JFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6918AE31F3D512765F908B4C59D693CF /* JFToastView+Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F43A4AB61D418C9E9EDB4F89E03BE6 /* JFToastView+Objc.swift */; };
-		87AC60BAC3396387DEF22FBF3625CF8A /* JFToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC9DBDCD4B00B1311E27BD85058F32 /* JFToastView.swift */; };
-		885C3A112CD8611F3C38B41859948255 /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D95FA0B8355B82463B57A4AECB9C4D2 /* JFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3B1B93AE7FC4E3F5F9E27C8013042B /* JFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5086C67F9428F63BDC42EE6E2DC202D4 /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F7FC315511413460E09AC0DF6A249 /* UIView+JFRect.swift */; };
+		6918AE31F3D512765F908B4C59D693CF /* JFToastView+Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23468A9BD2CC1836A43B63CF480B599E /* JFToastView+Objc.swift */; };
+		87AC60BAC3396387DEF22FBF3625CF8A /* JFToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F2294942CB58932C1C028AA1EB8D1 /* JFToastView.swift */; };
+		885C3A112CD8611F3C38B41859948255 /* JRBaseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7A18914A40CB608BD6C0C5C806691E0 /* JRBaseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C21714493EC022039FF8F0105CDC3D9 /* Pods-JFPopup_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB105868DFCBC70F759D140D595851C /* Pods-JFPopup_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D46FDA5459C07C6CE2FE1A3A33A7BC2 /* UIView+JFRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */; };
-		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */; };
-		950412EE48F8600E361FE459D74E3AFE /* JFAlertView+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73619203E63ADAEFE3058002A99BD318 /* JFAlertView+UIViewController.swift */; };
-		977B6D612D9C51D455839381928BB52B /* JFAlertView+PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40526F72EC1E7B838289C92AB9625992 /* JFAlertView+PopupView.swift */; };
-		A74049B200B4E3B4D703B9BBBA92E079 /* JFAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CFB41DCFA81335DF745182C84946D /* JFAlertView.swift */; };
-		ADCBA8590175B3BAC2DE3BADF6A96C69 /* JFToastQueueTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946D56E0C8C064F50EFD851B695C8AF /* JFToastQueueTask.swift */; };
-		B51F45619A30A0ED6BCBF086E9BEE1E0 /* JFPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */; };
+		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */; };
+		950412EE48F8600E361FE459D74E3AFE /* JFAlertView+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE9A759525DD5B5B8559E8AD76660F /* JFAlertView+UIViewController.swift */; };
+		977B6D612D9C51D455839381928BB52B /* JFAlertView+PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD5CAEFE29923FD6BD6AF1BD9A1032 /* JFAlertView+PopupView.swift */; };
+		A74049B200B4E3B4D703B9BBBA92E079 /* JFAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BCD4118B01D5B65010015D7148D7 /* JFAlertView.swift */; };
+		ADCBA8590175B3BAC2DE3BADF6A96C69 /* JFToastQueueTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88344721F54083E5C9A4DF083E4CDE2C /* JFToastQueueTask.swift */; };
+		AE007899D2542BE82DE912886C3DCD0A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29E563020BACF2C7EE0C351A45A8F6 /* UIColor+Extension.swift */; };
+		B51F45619A30A0ED6BCBF086E9BEE1E0 /* JFPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD5FF83569E9C09EF8508A972095BB /* JFPopupController.swift */; };
 		B9977A9FF58FEA539BA2787BFF55E3C2 /* Pods-JFPopup_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B748E203B6560840E268AF2D60C58C5C /* Pods-JFPopup_Example-dummy.m */; };
-		B9F84CD6DD8EEA360E23B47E1A6BF2B4 /* JFAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7738F0BF4034E0C87D8C2D9A78746F /* JFAlertAction.swift */; };
-		C7D8946AA966D3C8AACB196350B4BE5C /* JFPopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */; };
-		CDD1AB9C572F7EC3BC88DB00EB7A0A8D /* UIViewContoller+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */; };
-		D8AEC68363ACFDA52D7F6DA2C93CD48F /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */; };
+		B9F84CD6DD8EEA360E23B47E1A6BF2B4 /* JFAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6EDEF0E51296E3EA55A0EC31A4DDD0 /* JFAlertAction.swift */; };
+		C7D8946AA966D3C8AACB196350B4BE5C /* JFPopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7125226C3565CDE36A9FFA7F0261B8 /* JFPopupAnimation.swift */; };
+		CDD1AB9C572F7EC3BC88DB00EB7A0A8D /* UIViewContoller+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7F7B5538445CBCB243A859ECB1B9 /* UIViewContoller+JFPopup.swift */; };
+		D8AEC68363ACFDA52D7F6DA2C93CD48F /* JRBaseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FAB4C32EA1B6C4AE6FCDE8CACD471A /* JRBaseKit-dummy.m */; };
+		E031E42C2E4B410E0BD3BFA7F7468CAD /* Size+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA6AC85432E004FA0BDF0CAF59C014 /* Size+Extenison.swift */; };
 		E1A10BC325F29E1E94E5734CEF009494 /* Pods-JFPopup_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A40E578FCA581541034FF38E3DC5570 /* Pods-JFPopup_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E30A593E742C23DCB835380D019E645B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */; };
-		EA8BBBC5696E08BC31FCFF77A6CEFCCB /* jf_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */; };
-		F3F103BCBD42F59FC5D44CF15D889E8C /* JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */; };
-		F5D50CDF07BF2C49AE0E4941D67817C8 /* UIView+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */; };
+		F3F103BCBD42F59FC5D44CF15D889E8C /* JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B9F11FDB15FC3222C4C818AC613ACC /* JFPopup.swift */; };
+		F5D50CDF07BF2C49AE0E4941D67817C8 /* UIView+JFPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8E48AF0891DFD2C850A3FA2EC6A26 /* UIView+JFPopup.swift */; };
 		F67E77CB752FA66F6CF047487C7CE844 /* Pods-JFPopup_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36009E1F43F28F037D6A3A63693E5D73 /* Pods-JFPopup_Tests-dummy.m */; };
+		F994CEBE5D8EC559ED3051314517EA5C /* UIImage+JFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF261A8F59AB8A606405B2B7831E9C /* UIImage+JFColor.swift */; };
 		FEDCC4473DD847CF0F76473145334405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,70 +84,70 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "fail@2x.png"; path = "JFPopup/Assets/fail@2x.png"; sourceTree = "<group>"; };
+		0A29E563020BACF2C7EE0C351A45A8F6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Sources/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0A40E578FCA581541034FF38E3DC5570 /* Pods-JFPopup_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFPopup_Tests-umbrella.h"; sourceTree = "<group>"; };
+		0E1D5A5F0E616C10B4416F19B2600730 /* success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "success@2x.png"; path = "Assets/success@2x.png"; sourceTree = "<group>"; };
+		0F3B1B93AE7FC4E3F5F9E27C8013042B /* JFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-umbrella.h"; sourceTree = "<group>"; };
 		1022D177860BAFBC5AF473EE933765AE /* Pods-JFPopup_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Tests-Info.plist"; sourceTree = "<group>"; };
-		106CFB41DCFA81335DF745182C84946D /* JFAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFAlertView.swift; sourceTree = "<group>"; };
-		11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.debug.xcconfig; sourceTree = "<group>"; };
-		152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.release.xcconfig; sourceTree = "<group>"; };
-		2946D56E0C8C064F50EFD851B695C8AF /* JFToastQueueTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastQueueTask.swift; sourceTree = "<group>"; };
-		2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAnimation.swift; sourceTree = "<group>"; };
+		1F7125226C3565CDE36A9FFA7F0261B8 /* JFPopupAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAnimation.swift; sourceTree = "<group>"; };
+		220F7FC315511413460E09AC0DF6A249 /* UIView+JFRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JFRect.swift"; path = "Sources/UIView+JFRect.swift"; sourceTree = "<group>"; };
+		23468A9BD2CC1836A43B63CF480B599E /* JFToastView+Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFToastView+Objc.swift"; sourceTree = "<group>"; };
+		27BD5CAEFE29923FD6BD6AF1BD9A1032 /* JFAlertView+PopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFAlertView+PopupView.swift"; sourceTree = "<group>"; };
+		2E39ED91A2F51B2B4E0AE3CC71E73EB3 /* ResourceBundle-JFPopup-JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFPopup-JFPopup-Info.plist"; sourceTree = "<group>"; };
 		2F6888A77AD2C30F7AC104B3A3B264DC /* JFPopup */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JFPopup; path = JFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		330B008E166793D5B8156708833791BD /* Pods-JFPopup_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFPopup_Tests.modulemap"; sourceTree = "<group>"; };
-		3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jf_loading@2x.png"; path = "JFPopup/Assets/jf_loading@2x.png"; sourceTree = "<group>"; };
 		36009E1F43F28F037D6A3A63693E5D73 /* Pods-JFPopup_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFPopup_Tests-dummy.m"; sourceTree = "<group>"; };
-		3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFPopup-dummy.m"; sourceTree = "<group>"; };
+		3CDD5FF83569E9C09EF8508A972095BB /* JFPopupController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupController.swift; sourceTree = "<group>"; };
 		3F99408C1C35EDB555D40B2749A23121 /* Pods-JFPopup_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFPopup_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		40526F72EC1E7B838289C92AB9625992 /* JFAlertView+PopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFAlertView+PopupView.swift"; sourceTree = "<group>"; };
 		41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JRBaseKit; path = JRBaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Size+Extenison.swift"; path = "Classes/Size+Extenison.swift"; sourceTree = "<group>"; };
-		4D951F210E603505F5AD5F4AE3D52FA4 /* JRBaseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JRBaseKit-Info.plist"; sourceTree = "<group>"; };
-		50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+JFPopup.swift"; sourceTree = "<group>"; };
-		559BAEA00022D98C7737CB5091D7C1B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		43F7BC48D4DC63DC824493568B1C2361 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		46BF261A8F59AB8A606405B2B7831E9C /* UIImage+JFColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+JFColor.swift"; path = "Sources/UIImage+JFColor.swift"; sourceTree = "<group>"; };
+		4AFCE2E4747BAB43ED8AFE4EBE813C92 /* JFPopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.release.xcconfig; sourceTree = "<group>"; };
+		4CCE9A759525DD5B5B8559E8AD76660F /* JFAlertView+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFAlertView+UIViewController.swift"; sourceTree = "<group>"; };
+		502DA368564B62F2511A1D6306F3308F /* JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFPopup-Info.plist"; sourceTree = "<group>"; };
 		580FAD10447A789BA4C7856017A8B814 /* Pods-JFPopup_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5AFDAB1C72A28624140A17B2D4572D8B /* Pods-JFPopup_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.release.xcconfig; sourceTree = "<group>"; };
+		655D790C89403CA3428C624596F79229 /* JFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFPopup.modulemap; sourceTree = "<group>"; };
+		713644348DC965A6E35D90042A80962A /* JRBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.release.xcconfig; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73619203E63ADAEFE3058002A99BD318 /* JFAlertView+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFAlertView+UIViewController.swift"; sourceTree = "<group>"; };
-		77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-umbrella.h"; sourceTree = "<group>"; };
-		788E00C2B4D4B100B793A1C0E18DEFE9 /* JRBaseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JRBaseKit.modulemap; sourceTree = "<group>"; };
-		7AC983C4797C055410D9BEB0D08A4279 /* JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFPopup-Info.plist"; sourceTree = "<group>"; };
-		7F313102058A5E15ACF89CBA0DFA541E /* JFPopupActionSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupActionSheetView.swift; sourceTree = "<group>"; };
-		7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+JFPopup.swift"; sourceTree = "<group>"; };
+		76D5DCED5511410EAB3FACB62BC4DDB4 /* fail@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "fail@2x.png"; path = "Assets/fail@2x.png"; sourceTree = "<group>"; };
+		7AD5D11A9AAF2FE55182FA6C3A6C787F /* JFPopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
+		7BE9229D98640A31B082A09C2B25657F /* JFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFPopup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		80921636AE49E7B67F9AE40862E70A71 /* JFPopupActionSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupActionSheetView.swift; sourceTree = "<group>"; };
+		8149A1C405E4E4E4363A4FEA02F58755 /* JFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFPopup-dummy.m"; sourceTree = "<group>"; };
 		842F16635DD77E3410A648A5524D4E70 /* Pods-JFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.debug.xcconfig; sourceTree = "<group>"; };
+		88344721F54083E5C9A4DF083E4CDE2C /* JFToastQueueTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastQueueTask.swift; sourceTree = "<group>"; };
 		89C18E1597ED7EF1544B35C76F41ADC4 /* Pods-JFPopup_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFPopup_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8B2DF963FBFAE22A6CCE5F2364F79B8A /* JRBaseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JRBaseKit-Info.plist"; sourceTree = "<group>"; };
 		8BFBA7E31278FC5E08E053D67A3F1F3D /* Pods-JFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
-		978650DFD7FECFF2418FA77A8C613066 /* JFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JFPopup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8DE8E48AF0891DFD2C850A3FA2EC6A26 /* UIView+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+JFPopup.swift"; sourceTree = "<group>"; };
+		90FAB4C32EA1B6C4AE6FCDE8CACD471A /* JRBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JRBaseKit-dummy.m"; sourceTree = "<group>"; };
 		9B73DB52130A6150A5C5D8FC45A05354 /* Pods-JFPopup_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFPopup_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0F43A4AB61D418C9E9EDB4F89E03BE6 /* JFToastView+Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JFToastView+Objc.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA324E172CD2115FB0DC9E68295C7B1 /* jf_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jf_loading@2x.png"; path = "Assets/jf_loading@2x.png"; sourceTree = "<group>"; };
+		9FFB578DBF17F071FF47175A32AE5BB2 /* JFPopup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFPopup.debug.xcconfig; sourceTree = "<group>"; };
 		A5E76102A54E683A2522739BC8012348 /* Pods-JFPopup_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JFPopup_Example"; path = Pods_JFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65407C3CB9A6612E64293F5EFE70A50 /* JFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-prefix.pch"; sourceTree = "<group>"; };
+		AD6EDEF0E51296E3EA55A0EC31A4DDD0 /* JFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFAlertAction.swift; sourceTree = "<group>"; };
 		AEB83D04F62B6E67D9A26546449FD410 /* Pods-JFPopup_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JRBaseKit-dummy.m"; sourceTree = "<group>"; };
-		AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupController.swift; sourceTree = "<group>"; };
-		B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+JFColor.swift"; path = "Classes/UIImage+JFColor.swift"; sourceTree = "<group>"; };
-		B1B36EEEBEEF82136D5ADCBB9B234FF6 /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
-		B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupView.swift; sourceTree = "<group>"; };
-		B54A2ABC98DAFB305DEF05FB41ED1816 /* JFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFPopup.modulemap; sourceTree = "<group>"; };
 		B748E203B6560840E268AF2D60C58C5C /* Pods-JFPopup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFPopup_Example-dummy.m"; sourceTree = "<group>"; };
-		BF7738F0BF4034E0C87D8C2D9A78746F /* JFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFAlertAction.swift; sourceTree = "<group>"; };
+		B7A18914A40CB608BD6C0C5C806691E0 /* JRBaseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-umbrella.h"; sourceTree = "<group>"; };
+		B8CA6AC85432E004FA0BDF0CAF59C014 /* Size+Extenison.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Size+Extenison.swift"; path = "Sources/Size+Extenison.swift"; sourceTree = "<group>"; };
+		BD132FD7FBFE4CF0319F15A34BCFE78F /* JRBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JRBaseKit-prefix.pch"; sourceTree = "<group>"; };
 		C2123BF2FC521732298D894AC4D0D692 /* Pods-JFPopup_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFPopup_Example.modulemap"; sourceTree = "<group>"; };
-		C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JFRect.swift"; path = "Classes/UIView+JFRect.swift"; sourceTree = "<group>"; };
-		C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA529D6DB21C55502763490097067BE1 /* success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "success@2x.png"; path = "JFPopup/Assets/success@2x.png"; sourceTree = "<group>"; };
-		CBDC9DBDCD4B00B1311E27BD85058F32 /* JFToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastView.swift; sourceTree = "<group>"; };
-		CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JF.swift; path = Classes/JF.swift; sourceTree = "<group>"; };
-		D1FA5109C346A8DF89A978BA6D4A21A9 /* JFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-prefix.pch"; sourceTree = "<group>"; };
+		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JFPopup-JFPopup"; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0B9F11FDB15FC3222C4C818AC613ACC /* JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopup.swift; sourceTree = "<group>"; };
+		D20456D22901CE4904AAE5A8B751D6B1 /* JFPopupAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAction.swift; sourceTree = "<group>"; };
 		D340037178C3D879D6BD1BBA65A224E8 /* Pods-JFPopup_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JFPopup_Tests"; path = Pods_JFPopup_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2C5832044DBE23407CC9E649A4DB783 /* ResourceBundle-JFPopup-JFPopup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JFPopup-JFPopup-Info.plist"; sourceTree = "<group>"; };
+		D88ED6B83DB2DD20CF841095DA2A3F63 /* JF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JF.swift; path = Sources/JF.swift; sourceTree = "<group>"; };
+		DEDF7F7B5538445CBCB243A859ECB1B9 /* UIViewContoller+JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+JFPopup.swift"; sourceTree = "<group>"; };
+		E18F2294942CB58932C1C028AA1EB8D1 /* JFToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFToastView.swift; sourceTree = "<group>"; };
+		E234A394B1BFFE73B52716727D29211E /* JRBaseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JRBaseKit.modulemap; sourceTree = "<group>"; };
 		E586F7510A81381EBEB2AC44B7D0D1E4 /* Pods-JFPopup_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFPopup-umbrella.h"; sourceTree = "<group>"; };
 		EBB9B45B64303BAF13943582D2FC6FD8 /* Pods-JFPopup_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFPopup_Example-Info.plist"; sourceTree = "<group>"; };
-		EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopup.swift; sourceTree = "<group>"; };
 		EEB105868DFCBC70F759D140D595851C /* Pods-JFPopup_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFPopup_Example-umbrella.h"; sourceTree = "<group>"; };
-		F2E4AB8B1B6D248B9A7B85F5F77CE769 /* JFPopupAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFPopupAction.swift; sourceTree = "<group>"; };
+		F1F730F688CC6EE79D4778A18A175B2A /* JRBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JRBaseKit.debug.xcconfig; sourceTree = "<group>"; };
+		F779BCD4118B01D5B65010015D7148D7 /* JFAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JFAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				2F6888A77AD2C30F7AC104B3A3B264DC /* JFPopup */,
-				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */,
+				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */,
 				41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit */,
 				A5E76102A54E683A2522739BC8012348 /* Pods-JFPopup_Example */,
 				D340037178C3D879D6BD1BBA65A224E8 /* Pods-JFPopup_Tests */,
@@ -205,37 +205,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29E41D4EDF129531B97A3ABA4EDBFE50 /* Support Files */ = {
+		2B841BA31590329E2E613E06B617F37A /* ActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				788E00C2B4D4B100B793A1C0E18DEFE9 /* JRBaseKit.modulemap */,
-				AF266220584A30F1D296A288A34A1CD8 /* JRBaseKit-dummy.m */,
-				4D951F210E603505F5AD5F4AE3D52FA4 /* JRBaseKit-Info.plist */,
-				B1B36EEEBEEF82136D5ADCBB9B234FF6 /* JRBaseKit-prefix.pch */,
-				77A4DAED65F458C78D98F4A590414FD3 /* JRBaseKit-umbrella.h */,
-				871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */,
-				152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */,
+				D20456D22901CE4904AAE5A8B751D6B1 /* JFPopupAction.swift */,
+				80921636AE49E7B67F9AE40862E70A71 /* JFPopupActionSheetView.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JRBaseKit";
-			sourceTree = "<group>";
-		};
-		3206958B1FCBCF1488680F39BED95A7B /* ActionSheet */ = {
-			isa = PBXGroup;
-			children = (
-				F2E4AB8B1B6D248B9A7B85F5F77CE769 /* JFPopupAction.swift */,
-				7F313102058A5E15ACF89CBA0DFA541E /* JFPopupActionSheetView.swift */,
-			);
+			name = ActionSheet;
 			path = ActionSheet;
 			sourceTree = "<group>";
 		};
-		406D8299B6A702F66EC563C15484083A /* Toast */ = {
+		48E0CF5AA114955417DFA559399695C1 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				2946D56E0C8C064F50EFD851B695C8AF /* JFToastQueueTask.swift */,
-				CBDC9DBDCD4B00B1311E27BD85058F32 /* JFToastView.swift */,
-				A0F43A4AB61D418C9E9EDB4F89E03BE6 /* JFToastView+Objc.swift */,
+				88344721F54083E5C9A4DF083E4CDE2C /* JFToastQueueTask.swift */,
+				E18F2294942CB58932C1C028AA1EB8D1 /* JFToastView.swift */,
+				23468A9BD2CC1836A43B63CF480B599E /* JFToastView+Objc.swift */,
 			);
+			name = Toast;
 			path = Toast;
 			sourceTree = "<group>";
 		};
@@ -264,59 +251,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5814FF7044FA101A0E479806BAC8E171 /* Alert */ = {
+		5CC51A5A5D2610B293F6C4540DC2F600 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF7738F0BF4034E0C87D8C2D9A78746F /* JFAlertAction.swift */,
-				106CFB41DCFA81335DF745182C84946D /* JFAlertView.swift */,
-				40526F72EC1E7B838289C92AB9625992 /* JFAlertView+PopupView.swift */,
-				73619203E63ADAEFE3058002A99BD318 /* JFAlertView+UIViewController.swift */,
+				E234A394B1BFFE73B52716727D29211E /* JRBaseKit.modulemap */,
+				90FAB4C32EA1B6C4AE6FCDE8CACD471A /* JRBaseKit-dummy.m */,
+				8B2DF963FBFAE22A6CCE5F2364F79B8A /* JRBaseKit-Info.plist */,
+				BD132FD7FBFE4CF0319F15A34BCFE78F /* JRBaseKit-prefix.pch */,
+				B7A18914A40CB608BD6C0C5C806691E0 /* JRBaseKit-umbrella.h */,
+				F1F730F688CC6EE79D4778A18A175B2A /* JRBaseKit.debug.xcconfig */,
+				713644348DC965A6E35D90042A80962A /* JRBaseKit.release.xcconfig */,
 			);
-			path = Alert;
+			name = "Support Files";
+			path = "../Target Support Files/JRBaseKit";
 			sourceTree = "<group>";
 		};
-		608050420DAA377B3EBC5BE5660D0886 /* Core */ = {
+		6A6D5FF6481620E3337EB46355809EC3 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				EE903201885B7DF96F6E901BEAA36075 /* JFPopup.swift */,
-				2CB7AF0C59A3E2B9292C95C1A6F67D6B /* JFPopupAnimation.swift */,
-				AFC1858B21C9BAB0A536B0A98EEAC020 /* JFPopupController.swift */,
-				B2BB1FAB274B2830C9CE929DB19C5D47 /* JFPopupView.swift */,
-				50D36B26A01B8EAD918B5FD49DE56B17 /* UIView+JFPopup.swift */,
-				7F556AE8E929067DE6E668F78DF14C01 /* UIViewContoller+JFPopup.swift */,
-			);
-			name = Core;
-			path = JFPopup/Classes/Core;
-			sourceTree = "<group>";
-		};
-		64F737B7C066BC05D4A6C7662F3D5641 /* JRBaseKit */ = {
-			isa = PBXGroup;
-			children = (
-				CE70CD45FD2BCE81F97AE3BD82300FDA /* JF.swift */,
-				4C13C0ADA9ECF793CC610C7833363138 /* Size+Extenison.swift */,
-				C971E958A62A0250B3EC99C763962034 /* UIColor+Extension.swift */,
-				B03BFA45CBCCEE4878E3E9825C86207C /* UIImage+JFColor.swift */,
-				C2F75E72E5CC0ADBE191CF26921AC511 /* UIView+JFRect.swift */,
-				29E41D4EDF129531B97A3ABA4EDBFE50 /* Support Files */,
-			);
-			path = JRBaseKit;
-			sourceTree = "<group>";
-		};
-		6939DF391458DE897EC1885FBE162668 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				978650DFD7FECFF2418FA77A8C613066 /* JFPopup.podspec */,
-				559BAEA00022D98C7737CB5091D7C1B1 /* LICENSE */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		6DE27DB3D566CCDD73E1E3A5C08306A5 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				3206958B1FCBCF1488680F39BED95A7B /* ActionSheet */,
-				5814FF7044FA101A0E479806BAC8E171 /* Alert */,
-				406D8299B6A702F66EC563C15484083A /* Toast */,
+				2B841BA31590329E2E613E06B617F37A /* ActionSheet */,
+				8EEEDE2135D42D4682449C2B3022E8B1 /* Alert */,
+				48E0CF5AA114955417DFA559399695C1 /* Toast */,
 			);
 			name = General;
 			path = JFPopup/Classes/General;
@@ -338,6 +293,34 @@
 			path = "Target Support Files/Pods-JFPopup_Tests";
 			sourceTree = "<group>";
 		};
+		8200C9F3D8154721483E52A0B631A38E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				655D790C89403CA3428C624596F79229 /* JFPopup.modulemap */,
+				8149A1C405E4E4E4363A4FEA02F58755 /* JFPopup-dummy.m */,
+				502DA368564B62F2511A1D6306F3308F /* JFPopup-Info.plist */,
+				A65407C3CB9A6612E64293F5EFE70A50 /* JFPopup-prefix.pch */,
+				0F3B1B93AE7FC4E3F5F9E27C8013042B /* JFPopup-umbrella.h */,
+				9FFB578DBF17F071FF47175A32AE5BB2 /* JFPopup.debug.xcconfig */,
+				4AFCE2E4747BAB43ED8AFE4EBE813C92 /* JFPopup.release.xcconfig */,
+				2E39ED91A2F51B2B4E0AE3CC71E73EB3 /* ResourceBundle-JFPopup-JFPopup-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JFPopup";
+			sourceTree = "<group>";
+		};
+		8EEEDE2135D42D4682449C2B3022E8B1 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				AD6EDEF0E51296E3EA55A0EC31A4DDD0 /* JFAlertAction.swift */,
+				F779BCD4118B01D5B65010015D7148D7 /* JFAlertView.swift */,
+				27BD5CAEFE29923FD6BD6AF1BD9A1032 /* JFAlertView+PopupView.swift */,
+				4CCE9A759525DD5B5B8559E8AD76660F /* JFAlertView+UIViewController.swift */,
+			);
+			name = Alert;
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		9DAFE0EE10C0086AFED618DCE82F6283 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,25 +330,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		ADE961863A7CF567ACCF4677C42C74DE /* JFPopup */ = {
-			isa = PBXGroup;
-			children = (
-				0655D5A2C45748E0FF153E3110AF21F9 /* fail@2x.png */,
-				3418A444082E9E76F3AA5BE4F9D19F15 /* jf_loading@2x.png */,
-				CA529D6DB21C55502763490097067BE1 /* success@2x.png */,
-				608050420DAA377B3EBC5BE5660D0886 /* Core */,
-				6DE27DB3D566CCDD73E1E3A5C08306A5 /* General */,
-				6939DF391458DE897EC1885FBE162668 /* Pod */,
-				CFAE67BE1529C420B33C050F22EBFF67 /* Support Files */,
-			);
-			name = JFPopup;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		BBC30DF649B05668D27FEBAB079B1C60 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADE961863A7CF567ACCF4677C42C74DE /* JFPopup */,
+				D59927BB7211011BA8DF8DB38CF95535 /* JFPopup */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -382,20 +350,18 @@
 			);
 			sourceTree = "<group>";
 		};
-		CFAE67BE1529C420B33C050F22EBFF67 /* Support Files */ = {
+		D1D37F87B80D63CAB272EF41206DACA2 /* JRBaseKit */ = {
 			isa = PBXGroup;
 			children = (
-				B54A2ABC98DAFB305DEF05FB41ED1816 /* JFPopup.modulemap */,
-				3841CD43BD1A068931590B512D6F0AB6 /* JFPopup-dummy.m */,
-				7AC983C4797C055410D9BEB0D08A4279 /* JFPopup-Info.plist */,
-				D1FA5109C346A8DF89A978BA6D4A21A9 /* JFPopup-prefix.pch */,
-				EA421010D5D594BB6E11064A4A7C0356 /* JFPopup-umbrella.h */,
-				11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */,
-				5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */,
-				E2C5832044DBE23407CC9E649A4DB783 /* ResourceBundle-JFPopup-JFPopup-Info.plist */,
+				D88ED6B83DB2DD20CF841095DA2A3F63 /* JF.swift */,
+				B8CA6AC85432E004FA0BDF0CAF59C014 /* Size+Extenison.swift */,
+				0A29E563020BACF2C7EE0C351A45A8F6 /* UIColor+Extension.swift */,
+				46BF261A8F59AB8A606405B2B7831E9C /* UIImage+JFColor.swift */,
+				220F7FC315511413460E09AC0DF6A249 /* UIView+JFRect.swift */,
+				5CC51A5A5D2610B293F6C4540DC2F600 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JFPopup";
+			name = JRBaseKit;
+			path = JRBaseKit;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -406,12 +372,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D59927BB7211011BA8DF8DB38CF95535 /* JFPopup */ = {
+			isa = PBXGroup;
+			children = (
+				76D5DCED5511410EAB3FACB62BC4DDB4 /* fail@2x.png */,
+				9DA324E172CD2115FB0DC9E68295C7B1 /* jf_loading@2x.png */,
+				0E1D5A5F0E616C10B4416F19B2600730 /* success@2x.png */,
+				F506F56D3D1E355BA24ADBCF0B1873E7 /* Core */,
+				6A6D5FF6481620E3337EB46355809EC3 /* General */,
+				F5B50F9162EDA2823F2EF9DCE6CE0A45 /* Pod */,
+				8200C9F3D8154721483E52A0B631A38E /* Support Files */,
+			);
+			name = JFPopup;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F506F56D3D1E355BA24ADBCF0B1873E7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D0B9F11FDB15FC3222C4C818AC613ACC /* JFPopup.swift */,
+				1F7125226C3565CDE36A9FFA7F0261B8 /* JFPopupAnimation.swift */,
+				3CDD5FF83569E9C09EF8508A972095BB /* JFPopupController.swift */,
+				7AD5D11A9AAF2FE55182FA6C3A6C787F /* JFPopupView.swift */,
+				8DE8E48AF0891DFD2C850A3FA2EC6A26 /* UIView+JFPopup.swift */,
+				DEDF7F7B5538445CBCB243A859ECB1B9 /* UIViewContoller+JFPopup.swift */,
+			);
+			name = Core;
+			path = JFPopup/Classes/Core;
+			sourceTree = "<group>";
+		};
 		F5AE739F11EED52842C522581B0A2692 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				64F737B7C066BC05D4A6C7662F3D5641 /* JRBaseKit */,
+				D1D37F87B80D63CAB272EF41206DACA2 /* JRBaseKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5B50F9162EDA2823F2EF9DCE6CE0A45 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7BE9229D98640A31B082A09C2B25657F /* JFPopup.podspec */,
+				43F7BC48D4DC63DC824493568B1C2361 /* LICENSE */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,7 +547,7 @@
 			);
 			name = "JFPopup-JFPopup";
 			productName = JFPopup;
-			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */;
+			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -552,13 +556,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
-				TargetAttributes = {
-					EDE1E6FD7401647CC8F2BBB30393A18A = {
-						DevelopmentTeam = 4L75765R87;
-					};
-				};
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -594,9 +593,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				107838E049A98A686AB17D585F385F84 /* fail@2x.png in Resources */,
-				EA8BBBC5696E08BC31FCFF77A6CEFCCB /* jf_loading@2x.png in Resources */,
-				004515B296FFB1902F22BC4989F7851B /* success@2x.png in Resources */,
+				1694A3A8479D058542599DA45210C338 /* fail@2x.png in Resources */,
+				3B1F85F8103E364C40F3E647CFC7E51A /* jf_loading@2x.png in Resources */,
+				0203A7FA88FC16F006D4A746D9A0D565 /* success@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */,
+				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,12 +659,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				475F20F56FB7B25FEEF27F44D6F8172E /* JF.swift in Sources */,
+				2A3AF41601966C72DA8F3FAA82155F1D /* JF.swift in Sources */,
 				D8AEC68363ACFDA52D7F6DA2C93CD48F /* JRBaseKit-dummy.m in Sources */,
-				3E46CF74F1FD5014391C69B5ACC5B303 /* Size+Extenison.swift in Sources */,
-				E30A593E742C23DCB835380D019E645B /* UIColor+Extension.swift in Sources */,
-				0A8591115DF5DC6FAECFA8712CEA5930 /* UIImage+JFColor.swift in Sources */,
-				8D46FDA5459C07C6CE2FE1A3A33A7BC2 /* UIView+JFRect.swift in Sources */,
+				E031E42C2E4B410E0BD3BFA7F7468CAD /* Size+Extenison.swift in Sources */,
+				AE007899D2542BE82DE912886C3DCD0A /* UIColor+Extension.swift in Sources */,
+				F994CEBE5D8EC559ED3051314517EA5C /* UIImage+JFColor.swift in Sources */,
+				5086C67F9428F63BDC42EE6E2DC202D4 /* UIView+JFRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,10 +754,9 @@
 		};
 		105276D6D1339DA852E47740FD56D4CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */;
+			baseConfigurationReference = 4AFCE2E4747BAB43ED8AFE4EBE813C92 /* JFPopup.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
-				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -772,7 +770,7 @@
 		};
 		1A4D7A0A70F2C09516BA3713258E71A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FE7EE365825EF3EB30488E13E47A4EC /* JFPopup.release.xcconfig */;
+			baseConfigurationReference = 4AFCE2E4747BAB43ED8AFE4EBE813C92 /* JFPopup.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -803,10 +801,9 @@
 		};
 		1DF06E7230804C385AC38521716ED3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */;
+			baseConfigurationReference = 9FFB578DBF17F071FF47175A32AE5BB2 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
-				DEVELOPMENT_TEAM = 4L75765R87;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -820,7 +817,7 @@
 		};
 		246CBCB6D3800C2600A37C500595AFD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 871470EAF18226B44961B5DBF8EB3B27 /* JRBaseKit.debug.xcconfig */;
+			baseConfigurationReference = F1F730F688CC6EE79D4778A18A175B2A /* JRBaseKit.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -916,7 +913,7 @@
 		};
 		690DC0819CFE8618202DE9DCE1DA3768 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11A75E3D3E360DD0259C13F731A394F2 /* JFPopup.debug.xcconfig */;
+			baseConfigurationReference = 9FFB578DBF17F071FF47175A32AE5BB2 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -978,7 +975,7 @@
 		};
 		7515EEB6DF81254E76EAF207CAA5F2B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 152E8CE045A41149AF2F1C7BC79DD041 /* JRBaseKit.release.xcconfig */;
+			baseConfigurationReference = 713644348DC965A6E35D90042A80962A /* JRBaseKit.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1062,7 +1059,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

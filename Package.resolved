@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "jrbasekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JerryFans/JRBaseKit.git",
+      "state" : {
+        "revision" : "38674789638f65db94778e18ac01b1134573d788",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

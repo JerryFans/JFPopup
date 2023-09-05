@@ -18,7 +18,7 @@ Support 3 way to popup, Drawer, Dialog and BottomSheet.
 pod 'JFPopup', '1.5.4'
 ```
 
-### Swift Package Mangaer
+### Swift Package Manager
 
 After 1.5.4
 

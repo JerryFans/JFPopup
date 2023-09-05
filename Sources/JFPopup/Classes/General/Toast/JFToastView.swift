@@ -182,6 +182,13 @@ public class JFToastView: UIView {
         if let path = Bundle.main.path(forResource: imageName, ofType: imageType), let image = UIImage(contentsOfFile: path) {
             return image
         }
+        //support SPM
+        if let bundlePath = Bundle.main.path(forResource: "JFPopup_JFPopup", ofType: "bundle") {
+            if let imgPath = Bundle(path: bundlePath)?.path(forResource: imageName + "@2x", ofType: imageType), let image = UIImage(contentsOfFile: imgPath) {
+                return image
+            }
+            return nil
+        }
         guard let frameWorkPath = Bundle.main.path(forResource: "Frameworks", ofType: nil)?.appending("/JFPopup.framework") else { return nil }
         guard let bundlePath = Bundle(path: frameWorkPath)?.path(forResource: "JFPopup", ofType: "bundle") else { return nil }
         if let imgPath = Bundle(path: bundlePath)?.path(forResource: imageName + "@2x", ofType: imageType), let image = UIImage(contentsOfFile: imgPath) {

@@ -20,6 +20,6 @@ let package = Package(
             dependencies: [
               .product(name: "JRBaseKit", package: "JRBaseKit")
             ],
-            path: "JFPopup/Classes")
+            resources: [.process("Resources")])
     ]
 )

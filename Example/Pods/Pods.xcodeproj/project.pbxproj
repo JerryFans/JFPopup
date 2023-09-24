@@ -724,6 +724,7 @@
 			baseConfigurationReference = 8BFBA7E31278FC5E08E053D67A3F1F3D /* Pods-JFPopup_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -756,6 +757,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2D23BD09B6A6FECC4D2A7A17DACBA96 /* JFPopup.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
@@ -772,6 +774,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2D23BD09B6A6FECC4D2A7A17DACBA96 /* JFPopup.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -803,6 +806,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A01F7AE6BC813FDA5C284EAFA9C0DE9 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
@@ -819,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1F730F688CC6EE79D4778A18A175B2A /* JRBaseKit.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -915,6 +920,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A01F7AE6BC813FDA5C284EAFA9C0DE9 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -946,6 +952,7 @@
 			baseConfigurationReference = 842F16635DD77E3410A648A5524D4E70 /* Pods-JFPopup_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -977,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 713644348DC965A6E35D90042A80962A /* JRBaseKit.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1071,6 +1079,7 @@
 			baseConfigurationReference = 580FAD10447A789BA4C7856017A8B814 /* Pods-JFPopup_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1104,6 +1113,7 @@
 			baseConfigurationReference = 5AFDAB1C72A28624140A17B2D4572D8B /* Pods-JFPopup_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

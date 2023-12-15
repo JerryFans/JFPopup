@@ -134,6 +134,18 @@ public class JFPopupView: UIView {
     
     public var config: JFPopupConfig = .dialog
     
+    //use in onDismiss CallBack, some one want to know which is dismiss from tap background
+    /*
+     
+     onDismissPopupView: { mainContainer in
+         if mainContainer?.isClosedFromTapBackground {
+             //xxx
+         }
+     }
+     
+     */
+    public var isClosedFromTapBackground = false
+    
     typealias DismissedHanlde = () -> Void
     var dismissedHanlde: DismissedHanlde?
     
@@ -188,6 +200,7 @@ public class JFPopupView: UIView {
     
     @objc func tapBGAction() {
         guard self.config.isDismissible else { return }
+        self.isClosedFromTapBackground = true
         self.dismissPopupView { [weak self] isFinished in
             
         }

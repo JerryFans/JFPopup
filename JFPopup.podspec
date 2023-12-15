@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JFPopup'
-  s.version          = '1.5.5'
+  s.version          = '1.5.6'
   s.summary          = 'A Swift Popup Module help you popup your custom view easily'
 
 # This description is used to generate tags and improve search results.

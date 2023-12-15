@@ -236,7 +236,7 @@ class PopupInViewController: UIViewController {
     
     @objc func clickAction3() {
         JFPopupView.popup.drawer { mainContainer in
-            let view = DrawerView(frame: CGRect(x: 0, y: 0, width: CGSize.jf.screenWidth(), height: CGSize.jf.screenHeight()))
+            let view = DrawerView(frame: CGRect(x: 0, y: 0, width: CGSize.jf.screenWidth() - 100, height: CGSize.jf.screenHeight()))
             view.backgroundColor = UIColor.jf.rgb(0x7e7eff)
             view.closeHandle = { [weak mainContainer] in
                 mainContainer?.dismissPopupView(completion: { isFinished in
@@ -245,6 +245,7 @@ class PopupInViewController: UIViewController {
             }
             return view
         } onDismissPopupView: { mainContainer in
+            print("is close from tap bg \(String(describing: mainContainer?.isClosedFromTapBackground))")
             JFPopupView.popup.toast(hit: "Drawer 消失", icon: .success)
         }
     }

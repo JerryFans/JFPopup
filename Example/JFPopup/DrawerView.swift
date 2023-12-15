@@ -19,7 +19,7 @@ class DrawerView: UIView {
             btn.setTitle("关闭", for: .normal)
             btn.setTitleColor(.black, for: .normal)
         }
-        btn.jf.right = CGSize.jf.screenWidth() - 60
+        btn.jf.right = self.jf_width - 60
         btn.jf.top = 15 + CGFloat.jf.statusBarHeight()
         btn.jf.size = CGSize(width: 45, height: 45)
         btn.addTarget(self, action: #selector(closeAction), for: .touchUpInside)

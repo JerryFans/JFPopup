@@ -61,6 +61,7 @@ public extension JFPopup where Base: UIViewController {
         var config: JFPopupConfig = .dialog
         config.isDismissible = isDismissible
         config.bgColor = bgColor
+        config.toastPosition = .center
         self.custom(with: config, container: container)
     }
     

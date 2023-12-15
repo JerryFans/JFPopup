@@ -16,13 +16,16 @@ public extension JFPopup where Base: JFPopupView {
     ///   - enableDrag: default true, will enable drag animate
     ///   - bgColor: background view color
     ///   - container: your custom view
-    @discardableResult static func bottomSheet(with isDismissible: Bool = true, enableDrag: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView) -> JFPopupView? {
+    ///   - onDismissPopupView:  call when popup view dismissed (dealloc)
+    @discardableResult static func bottomSheet(with isDismissible: Bool = true, enableDrag: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView, onDismissPopupView: ((_ mainContainer: JFPopupView?) -> Void)? = nil) -> JFPopupView? {
         var config: JFPopupConfig = .bottomSheet
         config.isDismissible = isDismissible
         config.enableDrag = enableDrag
         config.bgColor = bgColor
         return self.custom(with: config, yourView: yourView) { mainContainer in
             container(mainContainer)
+        } onDismissPopupView: { mainContainer in
+            onDismissPopupView?(mainContainer)
         }
     }
     
@@ -34,7 +37,8 @@ public extension JFPopup where Base: JFPopupView {
     ///   - enableDrag: default true, will enable drag animate
     ///   - bgColor: background view color
     ///   - container: your custom view
-    @discardableResult static func drawer(with direction: JFPopupAnimationDirection = .left, isDismissible: Bool = true, enableDrag: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView) -> JFPopupView? {
+    ///   - onDismissPopupView:  call when popup view dismissed (dealloc)
+    @discardableResult static func drawer(with direction: JFPopupAnimationDirection = .left, isDismissible: Bool = true, enableDrag: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView, onDismissPopupView: ((_ mainContainer: JFPopupView?) -> Void)? = nil) -> JFPopupView? {
         var config: JFPopupConfig = .drawer
         config.direction = direction
         config.isDismissible = isDismissible
@@ -42,6 +46,8 @@ public extension JFPopup where Base: JFPopupView {
         config.bgColor = bgColor
         return self.custom(with: config, yourView: yourView) { mainContainer in
             container(mainContainer)
+        } onDismissPopupView: { mainContainer in
+            onDismissPopupView?(mainContainer)
         }
     }
     
@@ -51,12 +57,16 @@ public extension JFPopup where Base: JFPopupView {
     ///   - isDismissible: default true, will tap bg auto dismiss
     ///   - bgColor: background view color
     ///   - container: your custom view
-    @discardableResult static func dialog(with isDismissible: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView) -> JFPopupView? {
+    ///   - onDismissPopupView:  call when popup view dismissed (dealloc)
+    @discardableResult static func dialog(with isDismissible: Bool = true, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView, onDismissPopupView: ((_ mainContainer: JFPopupView?) -> Void)? = nil) -> JFPopupView? {
         var config: JFPopupConfig = .dialog
         config.isDismissible = isDismissible
         config.bgColor = bgColor
+        config.toastPosition = .center
         return self.custom(with: config, yourView: yourView) { mainContainer in
             container(mainContainer)
+        } onDismissPopupView: { mainContainer in
+            onDismissPopupView?(mainContainer)
         }
     }
     
@@ -64,11 +74,15 @@ public extension JFPopup where Base: JFPopupView {
     /// - Parameters:
     ///   - config: popup config
     ///   - container: your custom view
-    @discardableResult static func custom(with config: JFPopupConfig, yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView?) -> JFPopupView? {
+    ///   - onDismissPopupView:  call when popup view dismissed (dealloc)
+    @discardableResult static func custom(with config: JFPopupConfig, yourView: UIView? = nil, container: @escaping (_ mainContainer: JFPopupView?) -> UIView?, onDismissPopupView:  ((_ mainContainer: JFPopupView?) -> Void)? = nil) -> JFPopupView? {
         if Thread.current != Thread.main {
             return DispatchQueue.main.sync {
                 let v = JFPopupView(with: config) { mainContainer in
                     container(mainContainer)
+                }
+                v.dismissedHanlde = { [weak v] in
+                    onDismissPopupView?(v)
                 }
                 v.popup(into: yourView)
                 return v
@@ -76,6 +90,9 @@ public extension JFPopup where Base: JFPopupView {
         } else {
             let v = JFPopupView(with: config) { mainContainer in
                 container(mainContainer)
+            }
+            v.dismissedHanlde = { [weak v] in
+                onDismissPopupView?(v)
             }
             v.popup(into: yourView)
             return v
@@ -89,6 +106,7 @@ extension JFPopupView: JFPopupProtocol {
         self.popupProtocol?.dismiss(with: nil, config: self.config, contianerView: self.container, completion: { [weak self] isFinished in
             self?.removeFromSuperview()
             completion(isFinished)
+            self?.dismissedHanlde?()
         })
     }
     
@@ -115,6 +133,9 @@ public class JFPopupView: UIView {
     public var container: UIView?
     
     public var config: JFPopupConfig = .dialog
+    
+    typealias DismissedHanlde = () -> Void
+    var dismissedHanlde: DismissedHanlde?
     
     deinit {
         print("JFPopupView dealloc")
@@ -167,7 +188,7 @@ public class JFPopupView: UIView {
     
     @objc func tapBGAction() {
         guard self.config.isDismissible else { return }
-        self.dismissPopupView { isFinished in
+        self.dismissPopupView { [weak self] isFinished in
             
         }
     }

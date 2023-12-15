@@ -244,6 +244,8 @@ class PopupInViewController: UIViewController {
                 })
             }
             return view
+        } onDismissPopupView: { mainContainer in
+            JFPopupView.popup.toast(hit: "Drawer 消失", icon: .success)
         }
     }
     

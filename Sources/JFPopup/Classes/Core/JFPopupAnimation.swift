@@ -33,9 +33,12 @@ class JFPopupAnimation: NSObject {
                     contianerView.jf_size = CGSize(width: 120, height: 34)
                     contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: 27)
                 }
+                contianerView.layoutIfNeeded()
                 let updateV = {
                     contianerView.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: CGSize.jf.screenSize().height / 2)
-                    if config.toastPosition == .top {
+                    if let absoluteRect = config.absoluteRect {
+                        contianerView.frame = absoluteRect
+                    } else if config.toastPosition == .top {
                         contianerView.jf_top = CGFloat.jf.navigationBarHeight() + 15
                     } else if config.toastPosition == .bottom {
                         contianerView.jf_bottom = CGSize.jf.screenHeight() - CGFloat.jf.safeAreaBottomHeight() - 15
@@ -45,7 +48,7 @@ class JFPopupAnimation: NSObject {
                     }
                     contianerView.layoutIfNeeded()
                 }
-                if config.toastPosition == .dynamicIsland {
+                if config.toastPosition == .dynamicIsland && config.absoluteRect == nil {
                     UIView.animate(withDuration: 0.25) {
                         updateV()
                     } completion: { finished in
@@ -111,13 +114,13 @@ class JFPopupAnimation: NSObject {
         case .dialog:
             do {
                 UIView.animate(withDuration: 0.25, animations: {
-                    if config.toastPosition == .dynamicIsland {
+                    if config.toastPosition == .dynamicIsland && config.absoluteRect == nil {
                         contianerView?.layer.cornerRadius = 17
                         contianerView?.jf_size = CGSize(width: 120, height: 34)
                         contianerView?.center = CGPoint(x: CGSize.jf.screenSize().width / 2, y: 27)
                     }
                     contianerView?.subviews.forEach({ v in
-                        if config.toastPosition == .dynamicIsland {
+                        if config.toastPosition == .dynamicIsland && config.absoluteRect == nil {
                             v.isHidden = true
                         } else {
                             v.alpha = 0

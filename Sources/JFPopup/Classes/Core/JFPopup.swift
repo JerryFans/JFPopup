@@ -132,6 +132,9 @@ public struct JFPopupConfig {
     ///toast view position
     public var toastPosition: JFToastPosition = JFIsSupportDynamicIsLand ? .dynamicIsland : .center
     
+    ///show with a absolute rect , only use in dialog mode popup
+    public var absoluteRect: CGRect?
+    
     /// static style config
     public static var dialog = JFPopupConfig(enableDrag: false)
     public static var bottomSheet = JFPopupConfig(animationType: .bottomSheet)

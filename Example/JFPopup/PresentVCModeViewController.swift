@@ -200,6 +200,7 @@ class PresentVCModeViewController: UIViewController {
     
     @objc func clickAction11() {
         var config = JFPopupConfig.dialog
+        config.absoluteRect = .init(x: 20, y: 150, width: 200, height: 200)
         config.bgColor = UIColor.jf.rgb(0x7e7eff,alpha: 0.5)
         self.popup.custom(with: config) {
             let view: UIView = {
@@ -207,6 +208,12 @@ class PresentVCModeViewController: UIViewController {
                 view.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
                 view.layer.cornerRadius = 12
                 view.backgroundColor = .black
+                let label = UILabel()
+                label.text = "完全自定义Frame"
+                label.textColor = .white
+                view.addSubview(label)
+                label.sizeToFit()
+                label.center = view.center
                 return view
             }()
             return view
